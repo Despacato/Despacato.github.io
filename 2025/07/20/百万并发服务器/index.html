@@ -6,18 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2025 | Frog的博客</title>
+  <title>实现服务器的百万并发 | Frog的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大连海事大学18级硕士">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Frog的博客">
-<meta property="og:url" content="http://example.com/archives/2025/index.html">
+  <meta name="description" content="The reactor design pattern is an event handling pattern for handling service requests delivered concurrently to a service handler by one or more inputs.The service handler then demultiplexes the incom">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实现服务器的百万并发">
+<meta property="og:url" content="http://example.com/2025/07/20/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
 <meta property="og:site_name" content="Frog的博客">
-<meta property="og:description" content="大连海事大学18级硕士">
+<meta property="og:description" content="The reactor design pattern is an event handling pattern for handling service requests delivered concurrently to a service handler by one or more inputs.The service handler then demultiplexes the incom">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2025/07/20/images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720175605128.png">
+<meta property="og:image" content="http://example.com/images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720200739857.png">
+<meta property="og:image" content="http://example.com/images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720201830876.png">
+<meta property="og:image" content="http://example.com/images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720201949656.png">
+<meta property="og:image" content="http://example.com/images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720202113384.png">
+<meta property="og:image" content="http://example.com/images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720202230118.png">
+<meta property="og:image" content="http://example.com/images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720202339847.png">
+<meta property="article:published_time" content="2025-07-20T09:38:21.183Z">
+<meta property="article:modified_time" content="2025-07-20T12:34:55.122Z">
 <meta property="article:author" content="CodeFrog">
 <meta property="article:tag" content="加载中">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2025/07/20/images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720175605128.png">
   
     <link rel="alternative" href="/atom.xml" title="Frog的博客" type="application/atom+xml">
   
@@ -141,103 +151,176 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-百万并发服务器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      实现服务器的百万并发
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2025" class="archive-year">2025</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2025/07/20/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
+
+        
+        <a href="/2025/07/20/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
   	<time datetime="2025-07-20T09:38:21.183Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-07-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2025/07/20/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">实现服务器的百万并发</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The reactor design pattern is an event handling pattern for handling service requests delivered concurrently to a service handler by one or more inputs.The service handler then demultiplexes the incoming requests and dispatches them synchronously to the associated request handlers.</p>
+<span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="Reactor模型"><a href="#Reactor模型" class="headerlink" title="Reactor模型"></a>Reactor模型</h2><p>重要组件： Event事件、Reactor反应堆、Demultiplex事件分发器、Eventhandler事件处理器</p>
+<img src="../images/百万并发服务器/image-20250720175605128.png" alt="image-20250720175605128" style="zoom:50%;" />
 
+<h2 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;errno.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;netinet/in.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/epoll.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BUFFER_LENGTH 1024</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CONNECTION_SIZE 1048576 <span class="comment">//1024*1024</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> epfd = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">int</span> <span class="params">(*RCALLBACK)</span><span class="params">(<span class="type">int</span> fd)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">event_register</span><span class="params">(<span class="type">int</span> fd ,<span class="type">int</span> event)</span></span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">conn</span>&#123;</span><br><span class="line">	<span class="type">int</span> fd;</span><br><span class="line">	<span class="type">char</span> rbuffer[BUFFER_LENGTH];</span><br><span class="line">	<span class="type">int</span> rlength;</span><br><span class="line">	<span class="type">char</span> wbuffer[BUFFER_LENGTH];</span><br><span class="line">	<span class="type">int</span> wlength;</span><br><span class="line">	RCALLBACK send_callback;</span><br><span class="line">	<span class="keyword">union</span>&#123;</span><br><span class="line">		RCALLBACK recv_callback;</span><br><span class="line">		RCALLBACK accept_callback;</span><br><span class="line">	&#125;r_action;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">conn</span> conn_list[CONNECTION_SIZE] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">set_event</span><span class="params">(<span class="type">int</span> fd, <span class="type">int</span> event)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">epoll_event</span> ev;</span><br><span class="line">    ev.events = event;</span><br><span class="line">    ev.data.fd = fd;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 先尝试修改已有事件</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">epoll_ctl</span>(epfd, EPOLL_CTL_MOD, fd, &amp;ev) == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="comment">// 如果不存在则添加</span></span><br><span class="line">        <span class="keyword">if</span> (errno == ENOENT) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">epoll_ctl</span>(epfd, EPOLL_CTL_ADD, fd, &amp;ev) == <span class="number">-1</span>) &#123;</span><br><span class="line">                <span class="built_in">perror</span>(<span class="string">&quot;epoll_ctl add&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">perror</span>(<span class="string">&quot;epoll_ctl mod&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//listenfd(sockfd) --&gt;EPOLLIN --&gt;accept_cb</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">accept_cb</span><span class="params">(<span class="type">int</span> fd)</span></span>&#123;</span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">sockaddr_in</span> clientaddr;</span><br><span class="line">	<span class="type">socklen_t</span> len = <span class="built_in">sizeof</span>(clientaddr);</span><br><span class="line">	<span class="type">int</span> clientfd = <span class="built_in">accept</span>(fd,(<span class="keyword">struct</span> sockaddr*)&amp;clientaddr,&amp;len);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;accept finshed : %d\n&quot;</span>,clientfd);</span><br><span class="line">    <span class="keyword">if</span>(clientfd &lt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="built_in">event_register</span>(clientfd,EPOLLIN);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">recv_cb</span><span class="params">(<span class="type">int</span> fd)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> count = <span class="built_in">recv</span>(fd,conn_list[fd].rbuffer,BUFFER_LENGTH,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">if</span>(count ==<span class="number">0</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;client disconnect:%d\n&quot;</span>,fd);</span><br><span class="line">		<span class="built_in">close</span>(fd);</span><br><span class="line">		<span class="built_in">epoll_ctl</span>(epfd,EPOLL_CTL_DEL,fd,<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	conn_list[fd].rlength = count;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;RECV: %s\n&quot;</span>,conn_list[fd].rbuffer);</span><br><span class="line">	<span class="built_in">set_event</span>(fd,EPOLLOUT);</span><br><span class="line">	<span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">send_cb</span><span class="params">(<span class="type">int</span> fd)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> count = <span class="built_in">send</span>(fd,conn_list[fd].wbuffer,conn_list[fd].rlength,<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">set_event</span>(fd,EPOLLIN);</span><br><span class="line">	<span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">event_register</span><span class="params">(<span class="type">int</span> fd ,<span class="type">int</span> event)</span></span>&#123;</span><br><span class="line">	 <span class="keyword">if</span> (fd &gt;= CONNECTION_SIZE) &#123;</span><br><span class="line">        <span class="built_in">fprintf</span>(stderr, <span class="string">&quot;FD %d exceeds maximum connection size\n&quot;</span>, fd);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	conn_list[fd].fd = fd;</span><br><span class="line">	conn_list[fd].r_action.recv_callback = recv_cb;</span><br><span class="line">	conn_list[fd].send_callback= send_cb;</span><br><span class="line">	<span class="built_in">memset</span>(conn_list[fd].rbuffer,<span class="number">0</span>,BUFFER_LENGTH);</span><br><span class="line">	conn_list[fd].rlength = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">memset</span>(conn_list[fd].wbuffer,<span class="number">0</span>,BUFFER_LENGTH);</span><br><span class="line">	conn_list[fd].wlength = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">set_event</span>(fd,event);</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">init_server</span><span class="params">(<span class="type">unsigned</span> <span class="type">short</span> port)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> sockfd = <span class="built_in">socket</span>(AF_INET,SOCK_STREAM,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">sockaddr_in</span> servaddr;</span><br><span class="line">	servaddr.sin_family = AF_INET;</span><br><span class="line">	servaddr.sin_addr.s_addr = <span class="built_in">htonl</span>(INADDR_ANY);<span class="comment">//0.0.0.0</span></span><br><span class="line">	servaddr.sin_port = <span class="built_in">htons</span>(<span class="number">2000</span>); <span class="comment">//0-1023</span></span><br><span class="line">	<span class="keyword">if</span>( <span class="number">-1</span> == <span class="built_in">bind</span>(sockfd,(<span class="keyword">struct</span> sockaddr*)&amp;servaddr,<span class="built_in">sizeof</span>(<span class="keyword">struct</span> sockaddr)))&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;bind failed: %s\n&quot;</span>,<span class="built_in">strerror</span>(errno));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">listen</span>(sockfd,<span class="number">10</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;listen finshen: %d\n&quot;</span>,sockfd);</span><br><span class="line">	<span class="keyword">return</span> sockfd;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">short</span> port = <span class="number">2000</span>;</span><br><span class="line">	<span class="type">int</span> sockfd  = <span class="built_in">init_server</span>(port);</span><br><span class="line"></span><br><span class="line">	epfd = <span class="built_in">epoll_create</span>(<span class="number">1</span>);</span><br><span class="line">	conn_list[sockfd].fd = sockfd;</span><br><span class="line">	conn_list[sockfd].r_action.recv_callback = accept_cb;</span><br><span class="line">	<span class="built_in">set_event</span>(sockfd,EPOLLIN);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">struct</span> <span class="title class_">epoll_event</span> events[<span class="number">1024</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">		<span class="type">int</span> nready = <span class="built_in">epoll_wait</span>(epfd,events,<span class="number">1024</span>,<span class="number">-1</span>);</span><br><span class="line">		<span class="type">int</span> i =<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">0</span>;i&lt;nready;i++)&#123;</span><br><span class="line">			<span class="type">int</span> connfd = events[i].data.fd;</span><br><span class="line">			<span class="keyword">if</span>(events[i].events &amp; EPOLLIN)&#123;</span><br><span class="line">				conn_list[connfd].r_action.<span class="built_in">recv_callback</span>(connfd);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(events[i].events &amp; EPOLLOUT)&#123;</span><br><span class="line">				conn_list[connfd].<span class="built_in">send_callback</span>(connfd);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/epoll.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;errno.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;netinet/tcp.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;netdb.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_BUFFER		128</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_EPOLLSIZE	(384*1024)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_PORT		20</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TIME_SUB_MS(tv1, tv2)  ((tv1.tv_sec - tv2.tv_sec) * 1000 + (tv1.tv_usec - tv2.tv_usec) / 1000)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> isContinue = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">int</span> <span class="title">ntySetNonblock</span><span class="params">(<span class="type">int</span> fd)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> flags;</span><br><span class="line"></span><br><span class="line">	flags = <span class="built_in">fcntl</span>(fd, F_GETFL, <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">if</span> (flags &lt; <span class="number">0</span>) <span class="keyword">return</span> flags;</span><br><span class="line">	flags |= O_NONBLOCK;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">fcntl</span>(fd, F_SETFL, flags) &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">int</span> <span class="title">ntySetReUseAddr</span><span class="params">(<span class="type">int</span> fd)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> reuse = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">setsockopt</span>(fd, SOL_SOCKET, SO_REUSEADDR, (<span class="type">char</span> *)&amp;reuse, <span class="built_in">sizeof</span>(reuse));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> **argv)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (argc &lt;= <span class="number">2</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Usage: %s ip port\n&quot;</span>, argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="type">const</span> <span class="type">char</span> *ip = argv[<span class="number">1</span>];</span><br><span class="line">	<span class="type">int</span> port = <span class="built_in">atoi</span>(argv[<span class="number">2</span>]);</span><br><span class="line">	<span class="type">int</span> connections = <span class="number">0</span>;</span><br><span class="line">	<span class="type">char</span> buffer[<span class="number">128</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">0</span>, index = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">epoll_event</span> events[MAX_EPOLLSIZE];</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> epoll_fd = <span class="built_in">epoll_create</span>(MAX_EPOLLSIZE);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">strcpy</span>(buffer, <span class="string">&quot; Data From MulClient\n&quot;</span>);</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">sockaddr_in</span> addr;</span><br><span class="line">	<span class="built_in">memset</span>(&amp;addr, <span class="number">0</span>, <span class="built_in">sizeof</span>(<span class="keyword">struct</span> sockaddr_in));</span><br><span class="line">	</span><br><span class="line">	addr.sin_family = AF_INET;</span><br><span class="line">	addr.sin_addr.s_addr = <span class="built_in">inet_addr</span>(ip);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">timeval</span> tv_begin;</span><br><span class="line">	<span class="built_in">gettimeofday</span>(&amp;tv_begin, <span class="literal">NULL</span>);</span><br><span class="line">	<span class="type">int</span> sockfd = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (++index &gt;= MAX_PORT) index = <span class="number">0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">struct</span> <span class="title class_">epoll_event</span> ev;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (connections &lt; <span class="number">340000</span> &amp;&amp; !isContinue) &#123;</span><br><span class="line">			sockfd = <span class="built_in">socket</span>(AF_INET, SOCK_STREAM, <span class="number">0</span>);</span><br><span class="line">			<span class="keyword">if</span> (sockfd == <span class="number">-1</span>) &#123;</span><br><span class="line">				<span class="built_in">perror</span>(<span class="string">&quot;socket&quot;</span>);</span><br><span class="line">				<span class="keyword">goto</span> err;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="comment">//ntySetReUseAddr(sockfd);</span></span><br><span class="line">			addr.sin_port = <span class="built_in">htons</span>(port+index);</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">connect</span>(sockfd, (<span class="keyword">struct</span> sockaddr*)&amp;addr, <span class="built_in">sizeof</span>(<span class="keyword">struct</span> sockaddr_in)) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="built_in">perror</span>(<span class="string">&quot;connect&quot;</span>);</span><br><span class="line">				<span class="keyword">goto</span> err;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">ntySetNonblock</span>(sockfd);</span><br><span class="line">			<span class="built_in">ntySetReUseAddr</span>(sockfd);</span><br><span class="line"></span><br><span class="line">			<span class="built_in">sprintf</span>(buffer, <span class="string">&quot;Hello Server: client --&gt; %d\n&quot;</span>, connections);</span><br><span class="line">			<span class="built_in">send</span>(sockfd, buffer, <span class="built_in">strlen</span>(buffer), <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">			ev.data.fd = sockfd;</span><br><span class="line">			ev.events = EPOLLIN | EPOLLOUT;</span><br><span class="line">			<span class="built_in">epoll_ctl</span>(epoll_fd, EPOLL_CTL_ADD, sockfd, &amp;ev);</span><br><span class="line">		</span><br><span class="line">			connections ++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//connections ++;</span></span><br><span class="line">		<span class="keyword">if</span> (connections % <span class="number">1000</span> == <span class="number">999</span> || connections &gt;= <span class="number">340000</span>) &#123;</span><br><span class="line">			<span class="keyword">struct</span> <span class="title class_">timeval</span> tv_cur;</span><br><span class="line">			<span class="built_in">memcpy</span>(&amp;tv_cur, &amp;tv_begin, <span class="built_in">sizeof</span>(<span class="keyword">struct</span> timeval));</span><br><span class="line">			</span><br><span class="line">			<span class="built_in">gettimeofday</span>(&amp;tv_begin, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">			<span class="type">int</span> time_used = <span class="built_in">TIME_SUB_MS</span>(tv_begin, tv_cur);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;connections: %d, sockfd:%d, time_used:%d\n&quot;</span>, connections, sockfd, time_used);</span><br><span class="line"></span><br><span class="line">			<span class="type">int</span> nfds = <span class="built_in">epoll_wait</span>(epoll_fd, events, connections, <span class="number">100</span>);</span><br><span class="line">			<span class="keyword">for</span> (i = <span class="number">0</span>;i &lt; nfds;i ++) &#123;</span><br><span class="line">				<span class="type">int</span> clientfd = events[i].data.fd;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span> (events[i].events &amp; EPOLLOUT) &#123;</span><br><span class="line">				<span class="comment">//	sprintf(buffer, &quot;data from %d\n&quot;, clientfd);</span></span><br><span class="line">					<span class="built_in">send</span>(sockfd, buffer, <span class="built_in">strlen</span>(buffer), <span class="number">0</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (events[i].events &amp; EPOLLIN) &#123;</span><br><span class="line">					<span class="type">char</span> rBuffer[MAX_BUFFER] = &#123;<span class="number">0</span>&#125;;				</span><br><span class="line">					<span class="type">ssize_t</span> length = <span class="built_in">recv</span>(sockfd, rBuffer, MAX_BUFFER, <span class="number">0</span>);</span><br><span class="line">					<span class="keyword">if</span> (length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="comment">//		printf(&quot; RecvBuffer:%s\n&quot;, rBuffer);</span></span><br><span class="line"></span><br><span class="line">						<span class="keyword">if</span> (!<span class="built_in">strcmp</span>(rBuffer, <span class="string">&quot;quit&quot;</span>)) &#123;</span><br><span class="line">							isContinue = <span class="number">0</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						</span><br><span class="line">					&#125; <span class="keyword">else</span> <span class="keyword">if</span> (length == <span class="number">0</span>) &#123;</span><br><span class="line">						<span class="built_in">printf</span>(<span class="string">&quot; Disconnect clientfd:%d\n&quot;</span>, clientfd);</span><br><span class="line">						connections --;</span><br><span class="line">						<span class="built_in">close</span>(clientfd);</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="keyword">if</span> (errno == EINTR || errno == EAGAIN || errno == ENOTSOCK) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">						<span class="built_in">printf</span>(<span class="string">&quot; Error clientfd:%d, errno:%d\n&quot;</span>, clientfd, errno);</span><br><span class="line">						<span class="built_in">close</span>(clientfd);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">&quot; clientfd:%d, errno:%d\n&quot;</span>, clientfd, errno);</span><br><span class="line">					<span class="built_in">close</span>(clientfd);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">usleep</span>(<span class="number">500</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">err:</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;error : %s\n&quot;</span>, <span class="built_in">strerror</span>(errno));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="测试问题"><a href="#测试问题" class="headerlink" title="测试问题"></a>测试问题</h2><h3 id="1ulimit-a-查看open-files允许的最大数量-，使用ulimit-n-1048576-设置最大允许数量"><a href="#1ulimit-a-查看open-files允许的最大数量-，使用ulimit-n-1048576-设置最大允许数量" class="headerlink" title="1ulimit -a 查看open files允许的最大数量 ，使用ulimit -n 1048576 设置最大允许数量"></a>1ulimit -a 查看open files允许的最大数量 ，使用ulimit -n 1048576 设置最大允许数量</h3><p><img src="/../images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720200739857.png" alt="image-20250720200739857"></p>
+<p><img src="/../images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720201830876.png" alt="image-20250720201830876"></p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">natstat -anop | grep <span class="number">2000</span></span><br></pre></td></tr></table></figure>
+
+<p>该指令用来查看哪些服务在占用端口2000</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p><img src="/../images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720201949656.png" alt="image-20250720201949656"></p>
+<p>5元组确定链接的唯一性,ip分配不足</p>
+<p><img src="/../images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720202113384.png" alt="image-20250720202113384"></p>
+<p><img src="/../images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720202230118.png" alt="image-20250720202230118"></p>
+<p>解决办法：多设置一些端口</p>
+<p><img src="/../images/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20250720202339847.png" alt="image-20250720202339847"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/07/20/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2025/07/20/FirstBlog/" class="archive-article-date">
-  	<time datetime="2025-07-20T06:18:00.568Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-07-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2025/07/20/FirstBlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2025/07/20/FirstBlog/">我的第一篇博客</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2025/07/20/hello-world/" class="archive-article-date">
-  	<time datetime="2025-07-20T05:14:50.872Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2025/07/20/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -260,8 +343,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
