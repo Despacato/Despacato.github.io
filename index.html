@@ -163,20 +163,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一种求解股票买卖问题的通用解法"><a href="#一种求解股票买卖问题的通用解法" class="headerlink" title="一种求解股票买卖问题的通用解法"></a>一种求解股票买卖问题的通用解法</h1><p>前置：</p>
+        <p>前置：</p>
 <p>数组prices，prices[i]表示第i天的股票价格</p>
-<h2 id="1-只能进行一次交易"><a href="#1-只能进行一次交易" class="headerlink" title="1.只能进行一次交易"></a>1.只能进行一次交易</h2><p>在股票价格最低的那一天买入，在未来股票价格最高的那一天卖出。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">dp[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">0</span>; <span class="comment">//第0天不持有</span></span><br><span class="line">dp[<span class="number">0</span>][<span class="number">1</span>]=-prices[<span class="number">0</span>]; <span class="comment">//第0天持有</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">    dp[i][<span class="number">0</span>]=<span class="built_in">max</span>(dp[i<span class="number">-1</span>][<span class="number">0</span>],dp[i<span class="number">-1</span>][<span class="number">1</span>]+prices[i]);</span><br><span class="line">    <span class="comment">//第i天不持有=第i-1天不持有或第i-1天持有第i天卖掉</span></span><br><span class="line">    dp[i][<span class="number">1</span>]=<span class="built_in">max</span>(dp[i<span class="number">-1</span>][<span class="number">1</span>],-prices[i]);</span><br><span class="line">    <span class="comment">//第i天持有=第i-1天持有或第i天买入</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//dp[i-1][1] 里面存的是-prices[1~i-1]中的一个值，每当有更低的价格时就重新买入，保证买入只发生一次。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//dp[i][1] = max(dp[i-1][1],-prices[i]) 这里的-prices[i]体现了只能进行一次交易的核心逻辑。</span></span><br><span class="line"><span class="comment">//当选择第i天买入时，使用-prices[i]而不是dp[i-1][0]-prices[i]。-prices[i]表示没有任何前期利润的情况下进行买入</span></span><br><span class="line"><span class="comment">//dp[i-1][0]-prices[i]则表示可能利用之前的交易的利润进行多次交易，允许进行无数次交易。需要理解dp[i-1][0]的含义，第i-1天不持有股票的最大利润，已经包含了前期多次交易的累积利润。减去prices[i]的含义是，使用前期最大的累积利润进行新的买入。</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-交易次数为k"><a href="#2-交易次数为k" class="headerlink" title="2.  交易次数为k"></a>2.  交易次数为k</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dp[i][k][<span class="number">0</span>] <span class="comment">//第i天 还可以交易k次，手中没有股票</span></span><br><span class="line">dp[i][k][<span class="number">1</span>] <span class="comment">//第i天 还可以交易k次，手中有股票</span></span><br><span class="line">最终的收益，清空股票dp[n<span class="number">-1</span>][k][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../images/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/image-20250705182538480.png" alt="image-20250705182538480"></p>
-<p><img src="/../images/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/image-20250705182713831.png" alt="image-20250705182713831"></p>
-<p><img src="/../images/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/image-20250705183524877.png" alt="image-20250705183524877"></p>
-<p><img src="/../images/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/image-20250705184115710.png" alt="image-20250705184115710"></p>
-
+        
+          <a class="article-more-a" href="/2025/07/26/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/#more">more >></a>
+        
       
 
       
