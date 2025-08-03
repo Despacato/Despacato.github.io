@@ -143,6 +143,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>mysql</p>
+<hr>
+<!-- more --->
+
+<p>mysql</p>
+<h2 id="如何使用终端操作数据库"><a href="#如何使用终端操作数据库" class="headerlink" title="如何使用终端操作数据库"></a>如何使用终端操作数据库</h2><p>mysql -uroot -p123456</p>
+<h3 id="如何查询数据库服务器中的所有数据库"><a href="#如何查询数据库服务器中的所有数据库" class="headerlink" title="如何查询数据库服务器中的所有数据库"></a>如何查询数据库服务器中的所有数据库</h3><p>show databasesl;</p>
+<h3 id="如何选择某一个数据库进行操作"><a href="#如何选择某一个数据库进行操作" class="headerlink" title="如何选择某一个数据库进行操作"></a>如何选择某一个数据库进行操作</h3><p>select * from admin;<br>use shushe;</p>
+<h3 id="如何退出数据库"><a href="#如何退出数据库" class="headerlink" title="如何退出数据库"></a>如何退出数据库</h3><p>exit;</p>
+<h3 id="如何在数据库服务器中创建我们的数据库"><a href="#如何在数据库服务器中创建我们的数据库" class="headerlink" title="如何在数据库服务器中创建我们的数据库"></a>如何在数据库服务器中创建我们的数据库</h3><p>create database test;<br>use test;</p>
+<h3 id="如何查看某个数据库中所有的数据表"><a href="#如何查看某个数据库中所有的数据表" class="headerlink" title="如何查看某个数据库中所有的数据表"></a>如何查看某个数据库中所有的数据表</h3><p>show tables;</p>
+<h3 id="如何创建一个数据表"><a href="#如何创建一个数据表" class="headerlink" title="如何创建一个数据表"></a>如何创建一个数据表</h3><p>CREATE TABLE pet(name VARCHAR(20),owner VARCHAR(20),species VARCHAR(20),sex char(1),birth DATE,death DATE);</p>
+<h3 id="查看数据表是否创建成功"><a href="#查看数据表是否创建成功" class="headerlink" title="查看数据表是否创建成功"></a>查看数据表是否创建成功</h3><p>show tables;</p>
+<h3 id="如何查看数据表的结构"><a href="#如何查看数据表的结构" class="headerlink" title="如何查看数据表的结构"></a>如何查看数据表的结构</h3><p>describe pet;</p>
+<h3 id="查看数据表中的记录"><a href="#查看数据表中的记录" class="headerlink" title="查看数据表中的记录"></a>查看数据表中的记录</h3><p>select * from pet;</p>
+<h3 id="如何往数据表中添加数据记录"><a href="#如何往数据表中添加数据记录" class="headerlink" title="如何往数据表中添加数据记录"></a>如何往数据表中添加数据记录</h3><p>INSERT INFO pet VALUES(‘Puffball’,’Diane’,’hamster’,’f’,’1999-03-30’,NULL);<br>select * from pet;</p>
+<h3 id="数据类型如何选择"><a href="#数据类型如何选择" class="headerlink" title="数据类型如何选择"></a>数据类型如何选择</h3><p>日期 选择按照格式<br>数值和字符串按照大小</p>
+<h3 id="如何删除数据"><a href="#如何删除数据" class="headerlink" title="如何删除数据"></a>如何删除数据</h3><p>delete from pet where name&#x3D;’Fluffy’</p>
+<h3 id="如何修改数据"><a href="#如何修改数据" class="headerlink" title="如何修改数据"></a>如何修改数据</h3><p>update set name&#x3D;’旺旺财’ where owner&#x3D;’周星驰’</p>
+<h2 id="mysql建表约束"><a href="#mysql建表约束" class="headerlink" title="mysql建表约束"></a>mysql建表约束</h2><h2 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h2><p>它能唯一确定一张表中的一条记录，也就是我们通过给某个字段添加约束，就可以使得该字段不重复且不为空。<br>create table user(<br>    id int primary key,<br>    name varchar(  20)<br>);</p>
+<h2 id="mysql事务"><a href="#mysql事务" class="headerlink" title="mysql事务"></a>mysql事务</h2><p>mysql中，事务其实是一个最小的不可分割的工作单元。事务能够保证一个业务的完整性。<br>多条sql语句，可能会有同时成功的要求，要么就同时失败。</p>
+<p>mysql中如何控制事务<br>1.mysql默认是开启事务的（自动提交）<br>select @@autocommit;<br>默认事务开启的作用是什么？<br>当我们去执行一个sql语句的时候，效果会立即体现出来，且不能回滚。</p>
+<p>create database bank;<br>create table user(<br>    id int primary key,<br>    name varchar(20),<br>    money int<br>);<br>insert into user values(1,’a’,1000);<br>事务回滚，撤销sql语句执行效果<br>rollback;</p>
+<p>设置mysql自动提交为false<br>set autocommit&#x3D;0;</p>
+<h3 id="数据库设计的三范式以及反范式"><a href="#数据库设计的三范式以及反范式" class="headerlink" title="数据库设计的三范式以及反范式"></a>数据库设计的三范式以及反范式</h3><p>三范式的目的：减少空间占用跟避免数据冗余<br>三范式的内容：1.列不可分。2.在1的基础上，完全依赖主键而非部分依赖。3.在2基础上，主键直接相关，而非间接相关。<br>反范式： 允许一定冗余存储，为了提升查询效率。</p>
+<p>五大约束：Not null 非空约束、auto increment自增约束、unique唯一约束、primary主键约束、foreign外键约束</p>
+<h3 id="mysql运行原理"><a href="#mysql运行原理" class="headerlink" title="mysql运行原理"></a>mysql运行原理</h3><p>1.sql语句转换成执行计划，发送给innoDB的Handler API，在innoDB收到命令后，首先会在执行器中将各种请求进行微事务拆分(MTR,mini transaction)，对于底层页来说，每一个MTR都是原子访问。如果是读指令，则会去内存的Bufferpool中通过自适应哈希索引(AHI, adaptation hash index)进行查找并进行返回。innoDB会根据一些规则为热点页建立自适应哈希索引，提升热点页的查询速度，如果Buffer pool中没有找到所需数据对应的页，则会通过预读的方式从磁盘表空间中加载到buffer pool中，然后返回数据完成读指令。同时buffer pool会通过free链表，flush链表，lru链表三个链表来管理这些数据页的写入位置，刷盘位置以及数据页淘汰。如果是一个写指令，则要先写入负责事务回滚的Undo Log，然后把数据记录吸入Redo Log Buffer,同时根据一定的规则刷到磁盘Redo Log中，这么做是为了保证在断电睡着时恢复尚未刷到磁盘中的数据。log写完后需要将真实数据吸入Buffer pool，在这之前会根据一定规则判定是否要写入变更缓冲change buffer中，将在后续某些时机合并到buffer pool中，真实数据进入buffer poll后，接下来就要找机会把内存中的真实数据刷到磁盘中了，为保证页的完整传输会先将数据写入double write buffer,同时写入磁盘中系统表空间的double write里，这样即使在页传输到一半时断电，磁盘上产生的残缺的页也不用担心，通过double write就可以进行恢复，最后将真实数据刷到磁盘中就完成了写指令。</p>
+<p>ACID模型，就是数据库事务的四大特性：Atomicity 原子性 ，Consistency 一致性，Isolation隔离性，Durability持久性。主要要保证一致性。</p>
+<p>Atomicity :每一个事务都需要像原子一样不可分割。实现：在每次进行数据的增删改时，都需要先把对应的undo log记下来，通常一行数据的一次改动会对应一条undo log，</p>
+<p>Isolation：事务在执行过程中相互隔离，事务之间不能相互干扰，不能相互查看彼此未提交的数据，分为写写隔离、写读隔离，分别通过锁以及mvcc来实现。在多个事务同时执行时，会有三大明显问题，分别是，问题一：A事务执行过程中读取到了B事务还没有提交的数据，称为[脏读]。问题二：A事务执行过程中，若对同一条数据进行两次读取，在两次修改之间，B事务修改了这条数据并且进行了完整的提交，A事务的两次读取读到了不同的数据，被称为[不可重复读]。问题三：A事务执行过程中，若对同一个集合数据进行两次读取，在这两次读取之间，B事务在集合中增加或者删除了部分数据，A事务的两次读取读到了数量不一致的行数据，被称为[幻读]。为解决这三个问题，提供了四种[隔离级别]：分别是：一：隔离性最弱，三大问题都会出现的READ UNCOMMITED读未提交。二：能够解决[脏读]问题的READ COMMITED[读已提交]；三：在解决[脏读]基础上，又解决[不可重复读]的REPEATABLE READ 可重复读。四：解决包括[幻读]在内的所有问题，隔离性最高的serializable串行读。可以通过TRANSACTION_ISOLATION调整隔离级别</p>
+<p><img src="/../images/mysql/image-20250803210529937.png" alt="image-20250803210529937"></p>
+<p><img src="/../images/mysql/image-20250803210456096.png" alt="image-20250803210456096"></p>
+<p>Durability:指事务一旦提交，事务中所有的更改，就不会由于电源故障、系统崩溃、竞争条件在内的意外而发生变化。可能会出现的意外状况包含两种：一：在我向磁盘中写入数据(刷盘)时，内存缓冲区中的数据，在写入磁盘之前，就发生意外了，这样就会将内存中的数据丢失。innodb中通过redo log 机制保证内存中丢失的数据会被恢复到磁盘中。二：在刷盘时，默认以16Kb大小的数据页作为最小传输单元刷盘的，但操作系统Os通常是以每次4kb大小进行数据传输，所以在刷盘过程中发生意外时，数据页可能只传输了一部分，并没有被完整传输，为保证每一个磁盘中的数据页绝对完整，通过建立[双写缓冲区]通过它的同步恢复机制来解决。</p>
+<p>undolog 顾名思义就是为了回滚操作而诞生的机制，每个事务在进行数据操作的时候，都会在磁盘中创建与之对应的undolog,当事务异常时，会根据undolog逐一进行撤销操作。在事务中，每一条sql通过执行器后，第一时间就会在回滚段undo log segment中申请一个undo log页，然后根据sql信息来构造对应的undo log内容，同时将其写入磁盘。以保证每次操作真正数据之前，undo log是完整的。在undo log写入成功之后，才会执行内存数据写入，记录redo log、数据刷盘等。</p>
+<p><img src="/../images/mysql/image-20250803214248140.png" alt="image-20250803214248140"></p>
+<p><img src="/../images/mysql/image-20250803215533812.png" alt="image-20250803215533812"></p>
+<p>一条undo log日志，分别是记录了Undo类型，表id，头尾信息等在内的基本信息，以及记录了不同操作和数据的操作信息。undo有多种类型，最常见的就是代表增删改的trx_undo_insert_rec、trx_undo_del_mark_rec、trx_undo_upd_exist_rec新增时的undolog操作信息相对简单，</p>
+<p>隔离性的实现原理：锁机制：锁就是我为了我体内的事务和事务之间相互不影响而进化出来的功能，在某个事务操作数据之前，就会为这些数据加上一把锁，防止其他事务同时操作，在操作完成之后会将锁释放，以便其他事务再次进行上锁执行。innodb中的锁： LOCK_S共享锁(读锁) LOCK_X独占锁(写锁)</p>
+<p><img src="/../images/mysql/image-20250803221534684.png" alt="image-20250803221534684"></p>
+<p>数据加了共享锁之后，其他事务仍然可以加新的共享锁，但无法添加排它锁，这样就可以在读取数据的时候，阻止数据被其他事务修改。独占锁，也就是排它锁或写锁。数据加了独占锁之后，直到被释放前，其他事务将不能在为数据加任何锁。合理使用共享锁、独占锁就可以解决事务间写入 隔离的问题，以及脏读、重复读，不过有关读的问题可以使用效率更高的MVCC解决。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/07/30/mysql/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-一种求解股票买卖问题的通用解法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -214,6 +302,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+        <hr>
+<p>opengl</p>
+<hr>
+        
+          <a class="article-more-a" href="/2025/07/26/opengl/#more">more >></a>
         
       
 
@@ -406,7 +499,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>从今天开始记录。<br>记录我的事业。<br>拯救我的心。</p>
+        <p>从今天开始记录。<br>记录我的学习。<br>拯救我的心。</p>
 
       
 
