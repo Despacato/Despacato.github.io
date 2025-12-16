@@ -146,13 +146,28 @@
     <article id="post-杂乱" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/12/15/%E6%9D%82%E4%B9%B1/">关于win11、虚拟机互联与网络配置的笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2025/12/15/%E6%9D%82%E4%B9%B1/" class="archive-article-date">
+  	<time datetime="2025-12-15T09:38:49.015Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-12-15</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-关于win11、虚拟机互联与网络配置的笔记"><a href="#title-关于win11、虚拟机互联与网络配置的笔记" class="headerlink" title="title:关于win11、虚拟机互联与网络配置的笔记"></a>title:关于win11、虚拟机互联与网络配置的笔记</h2>
-        
-          <a class="article-more-a" href="/2025/12/15/%E6%9D%82%E4%B9%B1/#more">more >></a>
-        
+        <span id="more"></span>
+
+<p><img src="/../images/%E6%9D%82%E4%B9%B1/image-20251215173838060.png"></p>
+<h1 id="win11挂载Linux文件夹"><a href="#win11挂载Linux文件夹" class="headerlink" title="win11挂载Linux文件夹"></a>win11挂载Linux文件夹</h1><p><img src="/../images/%E6%9D%82%E4%B9%B1/image-20251217011059349.png" alt="image-20251217011059349"></p>
+
       
 
       
@@ -194,63 +209,40 @@
 
 
   
-    <article id="post-操作系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/09/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-redis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/09/12/redis/">redis</a>
+    </h1>
+  
+
+        
+        <a href="/2025/09/12/redis/" class="archive-article-date">
+  	<time datetime="2025-09-12T13:04:15.662Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-09-12</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h2>
-        
-          <a class="article-more-a" href="/2025/09/12/redis/#more">more >></a>
-        
+        <span id="more"></span>
+
+<h2 id="redis-是什么"><a href="#redis-是什么" class="headerlink" title="redis 是什么"></a>redis 是什么</h2><p>redis 是当今互联网使用最频繁的内存数据库。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"> */</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ApiRegisterUser</span><span class="params">(string &amp;post_data, string &amp;resp_json)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    string username;</span><br><span class="line">    string email;</span><br><span class="line">    string password;</span><br><span class="line">    LOG_INFO &lt;&lt; <span class="string">&quot;post_data: &quot;</span> &lt;&lt;  post_data;</span><br><span class="line">    <span class="comment">// 判断数据是否为空</span></span><br><span class="line">    <span class="keyword">if</span> (post_data.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        LOG_ERROR &lt;&lt; <span class="string">&quot;decodeRegisterJson failed&quot;</span>;</span><br><span class="line">        <span class="comment">//序列化 把结果返回给客户端</span></span><br><span class="line">        <span class="comment">// code = 1</span></span><br><span class="line">        <span class="built_in">encdoeRegisterJson</span>(api_error_id::bad_request, <span class="string">&quot;&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// json反序列化</span></span><br><span class="line">    </span><br><span class="line">    ret = <span class="built_in">decodeRegisterJson</span>(post_data, username, email, password);</span><br><span class="line">    <span class="keyword">if</span>(ret &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">encdoeRegisterJson</span>(api_error_id::bad_request, <span class="string">&quot;&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 注册账号</span></span><br><span class="line">    <span class="comment">// 先在数据库查询用户名 昵称 是否存在 如果不存在才去注册</span></span><br><span class="line">    ret = <span class="built_in">registerUser</span>(username, email, password);  </span><br><span class="line">    <span class="keyword">if</span>(ret != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">encdoeRegisterJson</span>(api_error_id::username_exists, <span class="string">&quot;&quot;</span>, resp_json);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//设置token</span></span><br><span class="line">        <span class="built_in">SetCookie</span>(email, resp_json); <span class="comment">//获取token  </span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 登录 使用  邮箱  密码</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ApiUserLogin</span><span class="params">(std::string &amp;post_data, std::string &amp;resp_json)</span></span>&#123;</span><br><span class="line">    string username;</span><br><span class="line">    string email;</span><br><span class="line">    string password;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 判断数据是否为空</span></span><br><span class="line">    <span class="keyword">if</span> (post_data.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="built_in">encodeLoginJson</span>(api_error_id::bad_request, <span class="string">&quot;data is empty&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">     <span class="comment">// 解析json</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">decodeLoginJson</span>(post_data, email, password) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        LOG_ERROR &lt;&lt; <span class="string">&quot;decodeRegisterJson failed&quot;</span>;</span><br><span class="line">        <span class="built_in">encodeLoginJson</span>(api_error_id::bad_request, <span class="string">&quot;email or password no fill&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 验证账号和密码是否匹配</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">verifyUserPassword</span>(email, password, username) != <span class="number">0</span>) &#123;</span><br><span class="line">        LOG_ERROR &lt;&lt; <span class="string">&quot;verifyUserPassword failed&quot;</span>;</span><br><span class="line">        <span class="built_in">encodeLoginJson</span>(api_error_id::bad_request, <span class="string">&quot;email password no match&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">SetCookie</span>(email, resp_json) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        LOG_ERROR &lt;&lt; <span class="string">&quot;SetCookie failed&quot;</span>;</span><br><span class="line">        <span class="built_in">encodeLoginJson</span>(api_error_id::bad_request, <span class="string">&quot;set cookie failed&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ApiGetRoomHistory</span><span class="params">(string room_name,  string &amp;last_message_id, MessageBatch &amp;message_batch)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    CacheManager *cache_manager = CacheManager::<span class="built_in">getInstance</span>();</span><br><span class="line">    CacheConn *cache_conn = cache_manager-&gt;<span class="built_in">GetCacheConn</span>(<span class="string">&quot;msg&quot;</span>);</span><br><span class="line">    <span class="built_in">AUTO_REL_CACHECONN</span>(cache_manager, cache_conn);</span><br><span class="line"></span><br><span class="line">    std::string stream_ref =   <span class="string">&quot;+&quot;</span>;</span><br><span class="line">    <span class="keyword">if</span> (!last_message_id.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        stream_ref = stream_ref;</span><br><span class="line">    &#125;</span><br><span class="line">    std::vector&lt;std::pair&lt;string, string&gt;&gt; msgs;</span><br><span class="line">    <span class="keyword">if</span>(cache_conn-&gt;<span class="built_in">GetXrevrange</span>(room_name, stream_ref, <span class="string">&quot;-&quot;</span>, message_batch_size, msgs)) &#123;</span><br><span class="line">        <span class="comment">//封装</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; msgs.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            LOG_INFO &lt;&lt; <span class="string">&quot;Key: &quot;</span> &lt;&lt; msgs[i].first &lt;&lt; <span class="string">&quot;, Value: &quot;</span> &lt;&lt; msgs[i].second;</span><br><span class="line">            Message msg;</span><br><span class="line">            msg.id = msgs[i].first;   <span class="comment">//这里保存的是消息id</span></span><br><span class="line"></span><br><span class="line">             <span class="type">bool</span> res;</span><br><span class="line">            Json::Value root;</span><br><span class="line">            Json::Reader jsonReader;</span><br><span class="line">            res = jsonReader.<span class="built_in">parse</span>( msgs[i].second, root);</span><br><span class="line">            <span class="keyword">if</span> (!res) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;parse redis msg failed &quot;</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!root.<span class="built_in">isObject</span>()) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;parsed JSON is not an object&quot;</span>; <span class="comment">//增强处理</span></span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (root[<span class="string">&quot;content&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;content null&quot;</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            msg.content = root[<span class="string">&quot;content&quot;</span>].<span class="built_in">asString</span>();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (root[<span class="string">&quot;user_id&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;content null&quot;</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            msg.user_id = root[<span class="string">&quot;user_id&quot;</span>].<span class="built_in">asInt64</span>();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (root[<span class="string">&quot;timestamp&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;timestamp null&quot;</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            msg.timestamp = root[<span class="string">&quot;timestamp&quot;</span>].<span class="built_in">asUInt64</span>();</span><br><span class="line">            message_batch.messages.<span class="built_in">push_back</span>(msg);</span><br><span class="line">        &#125;</span><br><span class="line">        message_batch.has_more = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">CWebSocketConn::handleClientMessages</span><span class="params">(Json::Value &amp;root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 把消息解析出来</span></span><br><span class="line">    string room_id;</span><br><span class="line">    <span class="keyword">if</span>(root[<span class="string">&quot;payload&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Json::Value payload = root[<span class="string">&quot;payload&quot;</span>];</span><br><span class="line">    <span class="keyword">if</span>(payload[<span class="string">&quot;roomId&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    room_id = payload[<span class="string">&quot;roomId&quot;</span>].<span class="built_in">asString</span>();</span><br><span class="line">    <span class="keyword">if</span>(payload[<span class="string">&quot;messages&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Json::Value arrayObj = payload[<span class="string">&quot;messages&quot;</span>];</span><br><span class="line">    <span class="keyword">if</span>(arrayObj.<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    std::vector&lt;Message&gt; msgs;  </span><br><span class="line">    <span class="type">uint64_t</span> timestamp = <span class="built_in">getCurrentTimestamp</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; arrayObj.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        Json::Value message = arrayObj[i];</span><br><span class="line">        Message msg;</span><br><span class="line">        msg.content = message[<span class="string">&quot;content&quot;</span>].<span class="built_in">asString</span>();</span><br><span class="line">        msg.timestamp = timestamp;</span><br><span class="line">        msg.user_id = userid_;</span><br><span class="line">        msg.username = username_;</span><br><span class="line">        msgs.<span class="built_in">push_back</span>(msg);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//写到redis里面</span></span><br><span class="line">    <span class="built_in">ApiStoreMessage</span>(room_id, msgs);</span><br><span class="line">    root = Json::<span class="built_in">Value</span>();</span><br><span class="line">    payload = Json::<span class="built_in">Value</span>();</span><br><span class="line">    root[<span class="string">&quot;type&quot;</span>] = <span class="string">&quot;serverMessages&quot;</span>;</span><br><span class="line">    payload[<span class="string">&quot;roomId&quot;</span>]  = room_id;</span><br><span class="line">    Json::Value messages;</span><br><span class="line">    <span class="comment">//for(Message msg: msgs)</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; msgs.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">        Json::Value  message;</span><br><span class="line">        Json::Value user;</span><br><span class="line">        message[<span class="string">&quot;id&quot;</span>] = msgs[j].id;</span><br><span class="line">        message[<span class="string">&quot;content&quot;</span>] = msgs[j].content;   </span><br><span class="line">        user[<span class="string">&quot;id&quot;</span>] = userid_;</span><br><span class="line">        user[<span class="string">&quot;username&quot;</span>] = username_;</span><br><span class="line">        message[<span class="string">&quot;user&quot;</span>] = user;</span><br><span class="line">        message[<span class="string">&quot;timestamp&quot;</span>] = (Json::UInt64)msgs[j].timestamp;</span><br><span class="line">        messages[j] = message;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(msgs.<span class="built_in">size</span>() &gt; <span class="number">0</span>)</span><br><span class="line">        payload[<span class="string">&quot;messages&quot;</span>] = messages;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        payload[<span class="string">&quot;messages&quot;</span>] = Json::arrayValue;</span><br><span class="line">    root[<span class="string">&quot;payload&quot;</span>] = payload;</span><br><span class="line">    Json::FastWriter writer;</span><br><span class="line">    string str_json = writer.<span class="built_in">write</span>(root);</span><br><span class="line">    LOG_INFO &lt;&lt; <span class="string">&quot;serverMessages: &quot;</span> &lt;&lt; str_json;</span><br><span class="line">    std::string response = <span class="built_in">buildWebSocketFrame</span>(str_json);</span><br><span class="line">     <span class="keyword">auto</span> callback = [&amp;response, &amp;room_id, <span class="keyword">this</span>](<span class="type">const</span> std::unordered_set&lt;<span class="type">uint32_t</span>&gt; user_ids) &#123;</span><br><span class="line">        LOG_INFO &lt;&lt; <span class="string">&quot;room_id:&quot;</span> &lt;&lt; room_id &lt;&lt; <span class="string">&quot;, callback &quot;</span> &lt;&lt;  <span class="string">&quot;, user_ids.size(): &quot;</span> &lt;&lt; user_ids.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">uint32_t</span> userId: user_ids)</span><br><span class="line">        &#123;</span><br><span class="line">             CHttpConnPtr ws_conn_ptr = <span class="literal">nullptr</span>;</span><br><span class="line">             &#123;</span><br><span class="line">                <span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">ulock</span><span class="params">(s_mtx_user_ws_conn_map_)</span></span>; <span class="comment">//自动释放</span></span><br><span class="line">                ws_conn_ptr =  s_user_ws_conn_map[userId];</span><br><span class="line">             &#125;</span><br><span class="line">             <span class="keyword">if</span>(ws_conn_ptr) &#123;</span><br><span class="line">                ws_conn_ptr-&gt;<span class="built_in">send</span>(response);</span><br><span class="line">             &#125; <span class="keyword">else</span></span><br><span class="line">             &#123;</span><br><span class="line">                LOG_WARN &lt;&lt; <span class="string">&quot;can&#x27;t find userid: &quot;</span> &lt;&lt; userId;</span><br><span class="line">             &#125;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;;</span><br><span class="line">    <span class="comment">// 广播给所有人</span></span><br><span class="line">    PubSubService::<span class="built_in">GetInstance</span>().<span class="built_in">PublishMessage</span>(room_id, callback);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">CWebSocketConn</span>: <span class="keyword">public</span> CHttpConn &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">CWebSocketConn</span>(<span class="type">const</span> TcpConnectionPtr&amp; conn);</span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">CWebSocketConn</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">OnRead</span><span class="params">( Buffer* buf)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">disconnect</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">sendCloseFrame</span><span class="params">(<span class="type">uint16_t</span> code, <span class="type">const</span> std::string reason)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">sendPongFrame</span><span class="params">()</span></span>; <span class="comment">// 发送 Pong 帧</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isCloseFrame</span><span class="params">(<span class="type">const</span> std::string&amp; frame)</span></span>; <span class="comment">//是否是关闭帧</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sendHelloMessage</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">handleClientMessages</span><span class="params">(Json::Value &amp;root)</span></span>;</span><br><span class="line">     <span class="function"><span class="type">int</span> <span class="title">handleRequestRoomHistory</span><span class="params">(Json::Value &amp;root)</span></span>;</span><br><span class="line">    <span class="type">bool</span>  handshake_completed_ = <span class="literal">false</span>; <span class="comment">//握手是否完成</span></span><br><span class="line">    <span class="type">int32_t</span> userid_ = <span class="number">-1</span>;   <span class="comment">//</span></span><br><span class="line">    string username_;           <span class="comment">//用户名</span></span><br><span class="line"></span><br><span class="line">     std::unordered_map&lt;string, Room&gt; rooms_map_;    <span class="comment">//加入的房间</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">using</span> CWebSocketConnPtr = std::shared_ptr&lt;CWebSocketConn&gt;;</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -360,14 +352,89 @@
     <article id="post-mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/07/30/mysql/">mysql</a>
+    </h1>
+  
+
+        
+        <a href="/2025/07/30/mysql/" class="archive-article-date">
+  	<time datetime="2025-07-30T14:08:23.582Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-07-30</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
+        <span id="more"></span>
+
 <p>mysql</p>
-<hr>
-        
-          <a class="article-more-a" href="/2025/07/30/mysql/#more">more >></a>
-        
+<h2 id="如何使用终端操作数据库"><a href="#如何使用终端操作数据库" class="headerlink" title="如何使用终端操作数据库"></a>如何使用终端操作数据库</h2><p>mysql -uroot -p123456</p>
+<h3 id="如何查询数据库服务器中的所有数据库"><a href="#如何查询数据库服务器中的所有数据库" class="headerlink" title="如何查询数据库服务器中的所有数据库"></a>如何查询数据库服务器中的所有数据库</h3><p>show databasesl;</p>
+<h3 id="如何选择某一个数据库进行操作"><a href="#如何选择某一个数据库进行操作" class="headerlink" title="如何选择某一个数据库进行操作"></a>如何选择某一个数据库进行操作</h3><p>select * from admin;<br>use shushe;</p>
+<h3 id="如何退出数据库"><a href="#如何退出数据库" class="headerlink" title="如何退出数据库"></a>如何退出数据库</h3><p>exit;</p>
+<h3 id="如何在数据库服务器中创建我们的数据库"><a href="#如何在数据库服务器中创建我们的数据库" class="headerlink" title="如何在数据库服务器中创建我们的数据库"></a>如何在数据库服务器中创建我们的数据库</h3><p>create database test;<br>use test;</p>
+<h3 id="如何查看某个数据库中所有的数据表"><a href="#如何查看某个数据库中所有的数据表" class="headerlink" title="如何查看某个数据库中所有的数据表"></a>如何查看某个数据库中所有的数据表</h3><p>show tables;</p>
+<h3 id="如何创建一个数据表"><a href="#如何创建一个数据表" class="headerlink" title="如何创建一个数据表"></a>如何创建一个数据表</h3><p>CREATE TABLE pet(name VARCHAR(20),owner VARCHAR(20),species VARCHAR(20),sex char(1),birth DATE,death DATE);</p>
+<h3 id="查看数据表是否创建成功"><a href="#查看数据表是否创建成功" class="headerlink" title="查看数据表是否创建成功"></a>查看数据表是否创建成功</h3><p>show tables;</p>
+<h3 id="如何查看数据表的结构"><a href="#如何查看数据表的结构" class="headerlink" title="如何查看数据表的结构"></a>如何查看数据表的结构</h3><p>describe pet;</p>
+<h3 id="查看数据表中的记录"><a href="#查看数据表中的记录" class="headerlink" title="查看数据表中的记录"></a>查看数据表中的记录</h3><p>select * from pet;</p>
+<h3 id="如何往数据表中添加数据记录"><a href="#如何往数据表中添加数据记录" class="headerlink" title="如何往数据表中添加数据记录"></a>如何往数据表中添加数据记录</h3><p>INSERT INFO pet VALUES(‘Puffball’,’Diane’,’hamster’,’f’,’1999-03-30’,NULL);<br>select * from pet;</p>
+<h3 id="数据类型如何选择"><a href="#数据类型如何选择" class="headerlink" title="数据类型如何选择"></a>数据类型如何选择</h3><p>日期 选择按照格式<br>数值和字符串按照大小</p>
+<h3 id="如何删除数据"><a href="#如何删除数据" class="headerlink" title="如何删除数据"></a>如何删除数据</h3><p>delete from pet where name&#x3D;’Fluffy’</p>
+<h3 id="如何修改数据"><a href="#如何修改数据" class="headerlink" title="如何修改数据"></a>如何修改数据</h3><p>update set name&#x3D;’旺旺财’ where owner&#x3D;’周星驰’</p>
+<h2 id="mysql建表约束"><a href="#mysql建表约束" class="headerlink" title="mysql建表约束"></a>mysql建表约束</h2><h2 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h2><p>它能唯一确定一张表中的一条记录，也就是我们通过给某个字段添加约束，就可以使得该字段不重复且不为空。<br>create table user(<br>    id int primary key,<br>    name varchar(  20)<br>);</p>
+<h2 id="mysql事务"><a href="#mysql事务" class="headerlink" title="mysql事务"></a>mysql事务</h2><p>mysql中，事务其实是一个最小的不可分割的工作单元。事务能够保证一个业务的完整性。<br>多条sql语句，可能会有同时成功的要求，要么就同时失败。</p>
+<p>mysql中如何控制事务<br>1.mysql默认是开启事务的（自动提交）<br>select @@autocommit;<br>默认事务开启的作用是什么？<br>当我们去执行一个sql语句的时候，效果会立即体现出来，且不能回滚。</p>
+<p>create database bank;<br>create table user(<br>    id int primary key,<br>    name varchar(20),<br>    money int<br>);<br>insert into user values(1,’a’,1000);<br>事务回滚，撤销sql语句执行效果<br>rollback;</p>
+<p>设置mysql自动提交为false<br>set autocommit&#x3D;0;</p>
+<h3 id="数据库设计的三范式以及反范式"><a href="#数据库设计的三范式以及反范式" class="headerlink" title="数据库设计的三范式以及反范式"></a>数据库设计的三范式以及反范式</h3><p>三范式的目的：减少空间占用跟避免数据冗余<br>三范式的内容：1.列不可分。2.在1的基础上，完全依赖主键而非部分依赖。3.在2基础上，主键直接相关，而非间接相关。<br>反范式： 允许一定冗余存储，为了提升查询效率。</p>
+<p>五大约束：Not null 非空约束、auto increment自增约束、unique唯一约束、primary主键约束、foreign外键约束</p>
+<h3 id="mysql运行原理"><a href="#mysql运行原理" class="headerlink" title="mysql运行原理"></a>mysql运行原理</h3><p>1.sql语句转换成执行计划，发送给innoDB的Handler API，在innoDB收到命令后，首先会在执行器中将各种请求进行微事务拆分(MTR,mini transaction)，对于底层页来说，每一个MTR都是原子访问。如果是读指令，则会去内存的Bufferpool中通过自适应哈希索引(AHI, adaptation hash index)进行查找并进行返回。innoDB会根据一些规则为热点页建立自适应哈希索引，提升热点页的查询速度，如果Buffer pool中没有找到所需数据对应的页，则会通过预读的方式从磁盘表空间中加载到buffer pool中，然后返回数据完成读指令。同时buffer pool会通过free链表，flush链表，lru链表三个链表来管理这些数据页的写入位置，刷盘位置以及数据页淘汰。如果是一个写指令，则要先写入负责事务回滚的Undo Log，然后把数据记录吸入Redo Log Buffer,同时根据一定的规则刷到磁盘Redo Log中，这么做是为了保证在断电睡着时恢复尚未刷到磁盘中的数据。log写完后需要将真实数据吸入Buffer pool，在这之前会根据一定规则判定是否要写入变更缓冲change buffer中，将在后续某些时机合并到buffer pool中，真实数据进入buffer poll后，接下来就要找机会把内存中的真实数据刷到磁盘中了，为保证页的完整传输会先将数据写入double write buffer,同时写入磁盘中系统表空间的double write里，这样即使在页传输到一半时断电，磁盘上产生的残缺的页也不用担心，通过double write就可以进行恢复，最后将真实数据刷到磁盘中就完成了写指令。</p>
+<p>ACID模型，就是数据库事务的四大特性：Atomicity 原子性 ，Consistency 一致性，Isolation隔离性，Durability持久性。主要要保证一致性。</p>
+<p>Atomicity :每一个事务都需要像原子一样不可分割。实现：在每次进行数据的增删改时，都需要先把对应的undo log记下来，通常一行数据的一次改动会对应一条undo log，</p>
+<p>Isolation：事务在执行过程中相互隔离，事务之间不能相互干扰，不能相互查看彼此未提交的数据，分为写写隔离、写读隔离，分别通过锁以及mvcc来实现。在多个事务同时执行时，会有三大明显问题，分别是，问题一：A事务执行过程中读取到了B事务还没有提交的数据，称为[脏读]。问题二：A事务执行过程中，若对同一条数据进行两次读取，在两次修改之间，B事务修改了这条数据并且进行了完整的提交，A事务的两次读取读到了不同的数据，被称为[不可重复读]。问题三：A事务执行过程中，若对同一个集合数据进行两次读取，在这两次读取之间，B事务在集合中增加或者删除了部分数据，A事务的两次读取读到了数量不一致的行数据，被称为[幻读]。为解决这三个问题，提供了四种[隔离级别]：分别是：一：隔离性最弱，三大问题都会出现的READ UNCOMMITED读未提交。二：能够解决[脏读]问题的READ COMMITED[读已提交]；三：在解决[脏读]基础上，又解决[不可重复读]的REPEATABLE READ 可重复读。四：解决包括[幻读]在内的所有问题，隔离性最高的serializable串行读。可以通过TRANSACTION_ISOLATION调整隔离级别</p>
+<p><img src="/../images/mysql/image-20250803210529937.png" alt="image-20250803210529937"></p>
+<p><img src="/../images/mysql/image-20250803210456096.png" alt="image-20250803210456096"></p>
+<p>Durability:指事务一旦提交，事务中所有的更改，就不会由于电源故障、系统崩溃、竞争条件在内的意外而发生变化。可能会出现的意外状况包含两种：一：在我向磁盘中写入数据(刷盘)时，内存缓冲区中的数据，在写入磁盘之前，就发生意外了，这样就会将内存中的数据丢失。innodb中通过redo log 机制保证内存中丢失的数据会被恢复到磁盘中。二：在刷盘时，默认以16Kb大小的数据页作为最小传输单元刷盘的，但操作系统Os通常是以每次4kb大小进行数据传输，所以在刷盘过程中发生意外时，数据页可能只传输了一部分，并没有被完整传输，为保证每一个磁盘中的数据页绝对完整，通过建立[双写缓冲区]通过它的同步恢复机制来解决。</p>
+<p>undolog 顾名思义就是为了回滚操作而诞生的机制，每个事务在进行数据操作的时候，都会在磁盘中创建与之对应的undolog,当事务异常时，会根据undolog逐一进行撤销操作。在事务中，每一条sql通过执行器后，第一时间就会在回滚段undo log segment中申请一个undo log页，然后根据sql信息来构造对应的undo log内容，同时将其写入磁盘。以保证每次操作真正数据之前，undo log是完整的。在undo log写入成功之后，才会执行内存数据写入，记录redo log、数据刷盘等。</p>
+<p><img src="/../images/mysql/image-20250803214248140.png" alt="image-20250803214248140"></p>
+<p><img src="/../images/mysql/image-20250803215533812.png" alt="image-20250803215533812"></p>
+<p>一条undo log日志，分别是记录了Undo类型，表id，头尾信息等在内的基本信息，以及记录了不同操作和数据的操作信息。undo有多种类型，最常见的就是代表增删改的trx_undo_insert_rec、trx_undo_del_mark_rec、trx_undo_upd_exist_rec新增时的undolog操作信息相对简单，</p>
+<p>隔离性的实现原理：锁机制：锁就是我为了我体内的事务和事务之间相互不影响而进化出来的功能，在某个事务操作数据之前，就会为这些数据加上一把锁，防止其他事务同时操作，在操作完成之后会将锁释放，以便其他事务再次进行上锁执行。innodb中的锁： LOCK_S共享锁(读锁) LOCK_X独占锁(写锁)</p>
+<p><img src="/../images/mysql/image-20250803221534684.png" alt="image-20250803221534684"></p>
+<p>数据加了共享锁之后，其他事务仍然可以加新的共享锁，但无法添加排它锁，这样就可以在读取数据的时候，阻止数据被其他事务修改。独占锁，也就是排它锁或写锁。数据加了独占锁之后，直到被释放前，其他事务将不能在为数据加任何锁。合理使用共享锁、独占锁就可以解决事务间写入 隔离的问题，以及脏读、重复读，不过有关读的问题可以使用效率更高的MVCC(multi-version concurrency control 多版本并发控制机制)解决。</p>
+<p>事务中锁的原理：</p>
+<p><img src="/../images/mysql/image-20250803230415388.png" alt="image-20250803230415388"></p>
+<p>MVCC机制：</p>
+<p>multi-version concurrency control多版本并发控制机制，是为解决[脏读]  [不可重复读]等事务之间读写问题而诞生的，MVCC在某些场景中替代了相对低效的[锁]，在保证了[隔离性]的基础上，提升了读取效率和并发性。</p>
+<p>MVCC是什么，用来解决什么问题、MVCC怎么实现的、undo log版本链 read view怎么回事、四种隔离级别怎么实现的、什么是当前读、什么是快照读、可重复读的隔离级别怎么避免幻读问题、</p>
+<p>InnoDb的页：</p>
+<p>页是InnoDB用于管理存储空间(磁盘和内存)的基本单位，是磁盘与内存的桥梁，数据在磁盘上以页为单位存储，当需要操作数据时，InnoDb会将整个页从磁盘读取到内存的缓冲池中，修改操作也在内存中的页上进行，之后由后台线程刷回磁盘</p>
+<p>索引是什么？</p>
+<p>索引是一种有序的数据结构。按照单个或多个列的值进行排序。索引的目的是提高搜索的效率。 约束是逻辑上的概念，索引是一个数据结构包括逻辑概念也包括物理的存储方式。</p>
+<p>主键索引：非空唯一索引，一个表只有一个主键索引。</p>
+<p><img src="/../images/mysql/image-20250816174730089.png" alt="image-20250816174730089"></p>
+<p><img src="/../images/mysql/image-20250816174435854.png" alt="image-20250816174435854"></p>
+<p><img src="/../images/mysql/image-20250816175417701.png" alt="image-20250816175417701"></p>
+<p>B+树：多路平衡搜索树。平衡：平衡树的高度。  多路：多叉树。搜索树：中序遍历是有序的结构。</p>
+<p><img src="/../images/mysql/image-20250816180609387.png" alt="image-20250816180609387"></p>
+<p><img src="/../images/mysql/image-20250816180828653.png" alt="image-20250816180828653"></p>
+<p><img src="/../images/mysql/image-20250816185716609.png" alt="image-20250816185716609"></p>
+<p><img src="/../images/mysql/image-20250816232812859.png" alt="image-20250816232812859"></p>
+<p>mysql为什么需要主从同步：读写分离</p>
+<p>在业务复杂的系统中，有这么一个场景，有一句sql语句需要锁表，导致暂时不能使用读的服务，那么就很影响运行中的业务，使用主从复制，让主库负责写，从库负责读，这样，即使主库出现了锁表的情形，通过读从库也可以保证业务正常运行。</p>
+<p>数据热备：数据备份，防止主机宕机</p>
+<p>架构的扩展。业务量越来越大，I&#x2F;O访问频率过高，单机无法满足，此时做多库存储，降低磁盘I&#x2F;O访问的频率，提高单个机器的I&#x2F;O性能。</p>
+<p>如何处理mysql的慢查询：1.开启慢查询日志，准确定位到哪个sql语句出现了问题。2.分析sql语句，看看是否load了额外的数据，可能是查询了多余的行并且抛弃掉了，可能是加载了许多结果中并不需要的列，对语句进行分析以及重写。3.分析语句的执行计划，然后获得其使用索引的情况，之后修改语句或者修改索引，使得语句尽可能命中索引。4.如果对语句的优化已经无法进行，可以考虑表中的数据量是否太大，如果是的话，可以进行横向或纵向的分表。</p>
+<p>Mysql事务的四个特性及含义：原子性、一致性、隔离性、持久性(acid)</p>
+<p>原子性:事务是一个不可分割的最小操作单元。一致性：数据需满足所有预设的约束条件。隔离性：当多个事务同时并发执行时，每个事务的执行过程不受其他并发事务的干扰。持久性：一旦事务成功提交，他对数据库的修改将永久保存。</p>
+<p>什么是mysql的主从复制：mysql主从复制是指数据可以从一个mysql数据库服务器主节点复制到一个或多个从节点。mysql默认采用异步复制方式，这样从节点不用一直访问主服务器来更细你自己的数据，数据的更新可以在远程连接上进行，从节点可以复制主数据库中的所有数据库或特定的数据库，或者特定的表。</p>
+<p><img src="/../images/mysql/image-20250817010810385.png" alt="image-20250817010810385"></p>
+
       
 
       
@@ -478,14 +545,32 @@
     <article id="post-opengl" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/07/26/opengl/">opengl</a>
+    </h1>
+  
+
+        
+        <a href="/2025/07/26/opengl/" class="archive-article-date">
+  	<time datetime="2025-07-26T14:31:50.058Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-07-26</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>opengl</p>
-<hr>
-        
-          <a class="article-more-a" href="/2025/07/26/opengl/#more">more >></a>
-        
+        <span id="more"></span>
+
+
+
+<h2 id="顶点着色器"><a href="#顶点着色器" class="headerlink" title="顶点着色器"></a>顶点着色器</h2><p>核心任务：处理每个顶点的数据<br>执行次数：对输入的每个顶点执行一次<br>输入：顶点属性  uniform变量<br>核心职责：将顶点的模型空间坐标转换成裁剪空间坐标<br>关键特性：<br>不生成像素，只处理顶点<br>无法访问其他顶点的数据<br>输出的gl_Position决定了顶点最终在屏幕上的位置<br>输出的其他out变量决定了这些数据如何在图元表面插值</p>
+<h2 id="片段着色器"><a href="#片段着色器" class="headerlink" title="片段着色器"></a>片段着色器</h2><p>核心任务：确定每个潜在像素片段的最终颜色<br>执行次数：对光栅化后的每个图元覆盖的每个片段执行一次(片段数量远多于顶点数量)<br>输入：顶点着色器输出的out变量，经过光栅化插值后得到的值<br>uniform变量<br>内置变量</p>
+<p>VBO : 顶点缓冲对象-&gt;本质是GPU显存中的一块内存区域，专门用来存储顶点数据(把顶点数据从慢速的cpu内存上传到快速的GPU显存中，这样GPU在绘制时就能高速访问这些数据，避免每帧从cpu传输)<br>VAO：顶点数组对象-&gt;一个配置记录器，不存储实际的顶点数据，存储的是如何解释VBO中的数据规则。<br>想象一下每次绘制前都要重新告诉 GPU：<br>“用哪个 VBO？”<br>“位置数据在这个 VBO 的哪个位置？是几个 float？”<br>“颜色数据又在哪里？是几个 float？”<br>… 这非常繁琐！<br>VAO 的作用就是 一次性记录好所有这些配置规则。在绘制时，你只需要绑定对应的 VAO，GPU 就知道去哪里找数据（绑定的 VBO）以及如何解读这些数据（配置规则）。大大简化了绘制调用！<br>简单说： VAO 就是 一个说明书，告诉 GPU 怎么去读 VBO 里那一大块数据（哪个位置是坐标，哪个位置是颜色，怎么间隔着读等等）。</p>
+<p>渲染管线的每个阶段：<br>顶点着色器-&gt;几何着色器-&gt;图元装配-&gt;光栅化-&gt;片段着色器-&gt;测试与混合<br>(1)顶点着色器允许我们对顶点属性进行一些基本的处理 -&gt;输出给几何着色器<br>(2)几何着色器将一组顶点作为输入，将这些顶点形成图元<br>(3)图元装配将顶点着色器输出的所有顶点作为输入，并将所有的点装配成指定图元<br>(4)图元装配的输出会被传入光栅化阶段，这里它会把图元映射为屏幕上对应的像素。在片段着色器运行之前会执行裁切。裁切会丢弃超出你视图之外的所有像素。<br>(5)片段着色器的主要目的是计算一个像素的最终颜色。这是所有opengl高级效果产生的地方。<br>(6)最终对象会被传到最后一个阶段，Alpha测试和混合。这个阶段检测片段对应的深度值。</p>
+
       
 
       
