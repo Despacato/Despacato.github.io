@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Frog的博客</title>
+  <title>高性能组件 | Frog的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大连海事大学18级硕士">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Frog的博客">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="自旋锁是计算机多线程同步中的一种基础锁机制，核心特点是当线程尝试获取锁但未成功时，不会进入阻塞状态，而是通过循环不断尝试获取锁，直到成功获取为止。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高性能组件">
+<meta property="og:url" content="http://example.com/2025/08/19/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Frog的博客">
-<meta property="og:description" content="大连海事大学18级硕士">
+<meta property="og:description" content="自旋锁是计算机多线程同步中的一种基础锁机制，核心特点是当线程尝试获取锁但未成功时，不会进入阻塞状态，而是通过循环不断尝试获取锁，直到成功获取为止。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-08-19T02:48:42.184Z">
+<meta property="article:modified_time" content="2025-08-19T03:27:57.289Z">
 <meta property="article:author" content="CodeFrog">
 <meta property="article:tag" content="加载中">
 <meta name="twitter:card" content="summary">
@@ -141,221 +143,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-杂乱" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-
-<p><img src="/../images/%E6%9D%82%E4%B9%B1/image-20251215173838060.png"></p>
-<h1 id="win11挂载Linux文件夹"><a href="#win11挂载Linux文件夹" class="headerlink" title="win11挂载Linux文件夹"></a>win11挂载Linux文件夹</h1><p><img src="/../images/%E6%9D%82%E4%B9%B1/image-20251217011059349.png" alt="image-20251217011059349"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/12/15/%E6%9D%82%E4%B9%B1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-aa" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">CWebSocketConn::handleRequestRoomHistory</span><span class="params">(Json::Value &amp;root)</span> </span>&#123;</span><br><span class="line">    std::string roomId = root[<span class="string">&quot;payload&quot;</span>][<span class="string">&quot;roomId&quot;</span>].<span class="built_in">asString</span>();</span><br><span class="line">    std::string firstMessageId = root[<span class="string">&quot;payload&quot;</span>][<span class="string">&quot;firstMessageId&quot;</span>].<span class="built_in">asString</span>();</span><br><span class="line">    <span class="type">int</span> count = root[<span class="string">&quot;payload&quot;</span>][<span class="string">&quot;count&quot;</span>].<span class="built_in">asInt</span>();</span><br><span class="line">    <span class="comment">// 从数据库获取历史消息</span></span><br><span class="line">    string  last_message_id;</span><br><span class="line">    MessageBatch  message_batch;</span><br><span class="line">    Room &amp;room_item = rooms_map_[roomId];</span><br><span class="line">    room_item.history_last_message_id = firstMessageId;</span><br><span class="line">    <span class="comment">// 获取房间的消息</span></span><br><span class="line">    <span class="built_in">ApiGetRoomHistory</span>(room_item, message_batch, count);  </span><br><span class="line">    </span><br><span class="line">    root = Json::<span class="built_in">Value</span>(); <span class="comment">//重新置空</span></span><br><span class="line">    <span class="comment">// 构建响应</span></span><br><span class="line">    root[<span class="string">&quot;type&quot;</span>] = <span class="string">&quot;serverRoomHistory&quot;</span>;</span><br><span class="line">    Json::Value payload;</span><br><span class="line">    payload[<span class="string">&quot;roomId&quot;</span>] = room_item.room_id;      <span class="comment">//聊天室id</span></span><br><span class="line">    payload[<span class="string">&quot;name&quot;</span>] = room_item.room_name;  <span class="comment">//聊天室名称</span></span><br><span class="line">    payload[<span class="string">&quot;hasMoreMessages&quot;</span>] = message_batch.has_more; <span class="comment">//是否还有更多消息</span></span><br><span class="line">   </span><br><span class="line">    <span class="comment">// 构建消息数组</span></span><br><span class="line">    <span class="function">Json::Value <span class="title">messages</span><span class="params">(Json::arrayValue)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; msg : message_batch.messages) &#123;</span><br><span class="line">        Json::Value message;</span><br><span class="line">        Json::Value user;</span><br><span class="line">        </span><br><span class="line">        message[<span class="string">&quot;id&quot;</span>] = msg.id;</span><br><span class="line">        message[<span class="string">&quot;content&quot;</span>] = msg.content;</span><br><span class="line">        user[<span class="string">&quot;id&quot;</span>] = (Json::Int64)msg.user_id;</span><br><span class="line">        user[<span class="string">&quot;username&quot;</span>] = msg.username;</span><br><span class="line">        message[<span class="string">&quot;user&quot;</span>] = user;</span><br><span class="line">        message[<span class="string">&quot;timestamp&quot;</span>] = (Json::UInt64)msg.timestamp;</span><br><span class="line">        </span><br><span class="line">        messages.<span class="built_in">append</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(message_batch.messages.<span class="built_in">size</span>() &gt; <span class="number">0</span>)</span><br><span class="line">        payload[<span class="string">&quot;messages&quot;</span>] = messages;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        payload[<span class="string">&quot;messages&quot;</span>] = Json::arrayValue;  <span class="comment">//不能为NULL，否则前端报异常</span></span><br><span class="line"></span><br><span class="line">    root[<span class="string">&quot;payload&quot;</span>] = payload;</span><br><span class="line">    std::string response = <span class="built_in">buildWebSocketFrame</span>(root.<span class="built_in">toStyledString</span>());</span><br><span class="line">    <span class="built_in">send</span>(response);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/12/15/aa/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-操作系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/09/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-redis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="redis-是什么"><a href="#redis-是什么" class="headerlink" title="redis 是什么"></a>redis 是什么</h2><p>redis 是当今互联网使用最频繁的内存数据库。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"> */</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ApiRegisterUser</span><span class="params">(string &amp;post_data, string &amp;resp_json)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    string username;</span><br><span class="line">    string email;</span><br><span class="line">    string password;</span><br><span class="line">    LOG_INFO &lt;&lt; <span class="string">&quot;post_data: &quot;</span> &lt;&lt;  post_data;</span><br><span class="line">    <span class="comment">// 判断数据是否为空</span></span><br><span class="line">    <span class="keyword">if</span> (post_data.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        LOG_ERROR &lt;&lt; <span class="string">&quot;decodeRegisterJson failed&quot;</span>;</span><br><span class="line">        <span class="comment">//序列化 把结果返回给客户端</span></span><br><span class="line">        <span class="comment">// code = 1</span></span><br><span class="line">        <span class="built_in">encdoeRegisterJson</span>(api_error_id::bad_request, <span class="string">&quot;&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// json反序列化</span></span><br><span class="line">    </span><br><span class="line">    ret = <span class="built_in">decodeRegisterJson</span>(post_data, username, email, password);</span><br><span class="line">    <span class="keyword">if</span>(ret &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">encdoeRegisterJson</span>(api_error_id::bad_request, <span class="string">&quot;&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 注册账号</span></span><br><span class="line">    <span class="comment">// 先在数据库查询用户名 昵称 是否存在 如果不存在才去注册</span></span><br><span class="line">    ret = <span class="built_in">registerUser</span>(username, email, password);  </span><br><span class="line">    <span class="keyword">if</span>(ret != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">encdoeRegisterJson</span>(api_error_id::username_exists, <span class="string">&quot;&quot;</span>, resp_json);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//设置token</span></span><br><span class="line">        <span class="built_in">SetCookie</span>(email, resp_json); <span class="comment">//获取token  </span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 登录 使用  邮箱  密码</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ApiUserLogin</span><span class="params">(std::string &amp;post_data, std::string &amp;resp_json)</span></span>&#123;</span><br><span class="line">    string username;</span><br><span class="line">    string email;</span><br><span class="line">    string password;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 判断数据是否为空</span></span><br><span class="line">    <span class="keyword">if</span> (post_data.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="built_in">encodeLoginJson</span>(api_error_id::bad_request, <span class="string">&quot;data is empty&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">     <span class="comment">// 解析json</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">decodeLoginJson</span>(post_data, email, password) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        LOG_ERROR &lt;&lt; <span class="string">&quot;decodeRegisterJson failed&quot;</span>;</span><br><span class="line">        <span class="built_in">encodeLoginJson</span>(api_error_id::bad_request, <span class="string">&quot;email or password no fill&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 验证账号和密码是否匹配</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">verifyUserPassword</span>(email, password, username) != <span class="number">0</span>) &#123;</span><br><span class="line">        LOG_ERROR &lt;&lt; <span class="string">&quot;verifyUserPassword failed&quot;</span>;</span><br><span class="line">        <span class="built_in">encodeLoginJson</span>(api_error_id::bad_request, <span class="string">&quot;email password no match&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">SetCookie</span>(email, resp_json) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        LOG_ERROR &lt;&lt; <span class="string">&quot;SetCookie failed&quot;</span>;</span><br><span class="line">        <span class="built_in">encodeLoginJson</span>(api_error_id::bad_request, <span class="string">&quot;set cookie failed&quot;</span>, resp_json);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ApiGetRoomHistory</span><span class="params">(string room_name,  string &amp;last_message_id, MessageBatch &amp;message_batch)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    CacheManager *cache_manager = CacheManager::<span class="built_in">getInstance</span>();</span><br><span class="line">    CacheConn *cache_conn = cache_manager-&gt;<span class="built_in">GetCacheConn</span>(<span class="string">&quot;msg&quot;</span>);</span><br><span class="line">    <span class="built_in">AUTO_REL_CACHECONN</span>(cache_manager, cache_conn);</span><br><span class="line"></span><br><span class="line">    std::string stream_ref =   <span class="string">&quot;+&quot;</span>;</span><br><span class="line">    <span class="keyword">if</span> (!last_message_id.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        stream_ref = stream_ref;</span><br><span class="line">    &#125;</span><br><span class="line">    std::vector&lt;std::pair&lt;string, string&gt;&gt; msgs;</span><br><span class="line">    <span class="keyword">if</span>(cache_conn-&gt;<span class="built_in">GetXrevrange</span>(room_name, stream_ref, <span class="string">&quot;-&quot;</span>, message_batch_size, msgs)) &#123;</span><br><span class="line">        <span class="comment">//封装</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; msgs.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            LOG_INFO &lt;&lt; <span class="string">&quot;Key: &quot;</span> &lt;&lt; msgs[i].first &lt;&lt; <span class="string">&quot;, Value: &quot;</span> &lt;&lt; msgs[i].second;</span><br><span class="line">            Message msg;</span><br><span class="line">            msg.id = msgs[i].first;   <span class="comment">//这里保存的是消息id</span></span><br><span class="line"></span><br><span class="line">             <span class="type">bool</span> res;</span><br><span class="line">            Json::Value root;</span><br><span class="line">            Json::Reader jsonReader;</span><br><span class="line">            res = jsonReader.<span class="built_in">parse</span>( msgs[i].second, root);</span><br><span class="line">            <span class="keyword">if</span> (!res) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;parse redis msg failed &quot;</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!root.<span class="built_in">isObject</span>()) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;parsed JSON is not an object&quot;</span>; <span class="comment">//增强处理</span></span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (root[<span class="string">&quot;content&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;content null&quot;</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            msg.content = root[<span class="string">&quot;content&quot;</span>].<span class="built_in">asString</span>();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (root[<span class="string">&quot;user_id&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;content null&quot;</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            msg.user_id = root[<span class="string">&quot;user_id&quot;</span>].<span class="built_in">asInt64</span>();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (root[<span class="string">&quot;timestamp&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">                LOG_ERROR &lt;&lt; <span class="string">&quot;timestamp null&quot;</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            msg.timestamp = root[<span class="string">&quot;timestamp&quot;</span>].<span class="built_in">asUInt64</span>();</span><br><span class="line">            message_batch.messages.<span class="built_in">push_back</span>(msg);</span><br><span class="line">        &#125;</span><br><span class="line">        message_batch.has_more = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">CWebSocketConn::handleClientMessages</span><span class="params">(Json::Value &amp;root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 把消息解析出来</span></span><br><span class="line">    string room_id;</span><br><span class="line">    <span class="keyword">if</span>(root[<span class="string">&quot;payload&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Json::Value payload = root[<span class="string">&quot;payload&quot;</span>];</span><br><span class="line">    <span class="keyword">if</span>(payload[<span class="string">&quot;roomId&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    room_id = payload[<span class="string">&quot;roomId&quot;</span>].<span class="built_in">asString</span>();</span><br><span class="line">    <span class="keyword">if</span>(payload[<span class="string">&quot;messages&quot;</span>].<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Json::Value arrayObj = payload[<span class="string">&quot;messages&quot;</span>];</span><br><span class="line">    <span class="keyword">if</span>(arrayObj.<span class="built_in">isNull</span>()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    std::vector&lt;Message&gt; msgs;  </span><br><span class="line">    <span class="type">uint64_t</span> timestamp = <span class="built_in">getCurrentTimestamp</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; arrayObj.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        Json::Value message = arrayObj[i];</span><br><span class="line">        Message msg;</span><br><span class="line">        msg.content = message[<span class="string">&quot;content&quot;</span>].<span class="built_in">asString</span>();</span><br><span class="line">        msg.timestamp = timestamp;</span><br><span class="line">        msg.user_id = userid_;</span><br><span class="line">        msg.username = username_;</span><br><span class="line">        msgs.<span class="built_in">push_back</span>(msg);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//写到redis里面</span></span><br><span class="line">    <span class="built_in">ApiStoreMessage</span>(room_id, msgs);</span><br><span class="line">    root = Json::<span class="built_in">Value</span>();</span><br><span class="line">    payload = Json::<span class="built_in">Value</span>();</span><br><span class="line">    root[<span class="string">&quot;type&quot;</span>] = <span class="string">&quot;serverMessages&quot;</span>;</span><br><span class="line">    payload[<span class="string">&quot;roomId&quot;</span>]  = room_id;</span><br><span class="line">    Json::Value messages;</span><br><span class="line">    <span class="comment">//for(Message msg: msgs)</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; msgs.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">        Json::Value  message;</span><br><span class="line">        Json::Value user;</span><br><span class="line">        message[<span class="string">&quot;id&quot;</span>] = msgs[j].id;</span><br><span class="line">        message[<span class="string">&quot;content&quot;</span>] = msgs[j].content;   </span><br><span class="line">        user[<span class="string">&quot;id&quot;</span>] = userid_;</span><br><span class="line">        user[<span class="string">&quot;username&quot;</span>] = username_;</span><br><span class="line">        message[<span class="string">&quot;user&quot;</span>] = user;</span><br><span class="line">        message[<span class="string">&quot;timestamp&quot;</span>] = (Json::UInt64)msgs[j].timestamp;</span><br><span class="line">        messages[j] = message;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(msgs.<span class="built_in">size</span>() &gt; <span class="number">0</span>)</span><br><span class="line">        payload[<span class="string">&quot;messages&quot;</span>] = messages;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        payload[<span class="string">&quot;messages&quot;</span>] = Json::arrayValue;</span><br><span class="line">    root[<span class="string">&quot;payload&quot;</span>] = payload;</span><br><span class="line">    Json::FastWriter writer;</span><br><span class="line">    string str_json = writer.<span class="built_in">write</span>(root);</span><br><span class="line">    LOG_INFO &lt;&lt; <span class="string">&quot;serverMessages: &quot;</span> &lt;&lt; str_json;</span><br><span class="line">    std::string response = <span class="built_in">buildWebSocketFrame</span>(str_json);</span><br><span class="line">     <span class="keyword">auto</span> callback = [&amp;response, &amp;room_id, <span class="keyword">this</span>](<span class="type">const</span> std::unordered_set&lt;<span class="type">uint32_t</span>&gt; user_ids) &#123;</span><br><span class="line">        LOG_INFO &lt;&lt; <span class="string">&quot;room_id:&quot;</span> &lt;&lt; room_id &lt;&lt; <span class="string">&quot;, callback &quot;</span> &lt;&lt;  <span class="string">&quot;, user_ids.size(): &quot;</span> &lt;&lt; user_ids.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">uint32_t</span> userId: user_ids)</span><br><span class="line">        &#123;</span><br><span class="line">             CHttpConnPtr ws_conn_ptr = <span class="literal">nullptr</span>;</span><br><span class="line">             &#123;</span><br><span class="line">                <span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">ulock</span><span class="params">(s_mtx_user_ws_conn_map_)</span></span>; <span class="comment">//自动释放</span></span><br><span class="line">                ws_conn_ptr =  s_user_ws_conn_map[userId];</span><br><span class="line">             &#125;</span><br><span class="line">             <span class="keyword">if</span>(ws_conn_ptr) &#123;</span><br><span class="line">                ws_conn_ptr-&gt;<span class="built_in">send</span>(response);</span><br><span class="line">             &#125; <span class="keyword">else</span></span><br><span class="line">             &#123;</span><br><span class="line">                LOG_WARN &lt;&lt; <span class="string">&quot;can&#x27;t find userid: &quot;</span> &lt;&lt; userId;</span><br><span class="line">             &#125;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;;</span><br><span class="line">    <span class="comment">// 广播给所有人</span></span><br><span class="line">    PubSubService::<span class="built_in">GetInstance</span>().<span class="built_in">PublishMessage</span>(room_id, callback);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">CWebSocketConn</span>: <span class="keyword">public</span> CHttpConn &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">CWebSocketConn</span>(<span class="type">const</span> TcpConnectionPtr&amp; conn);</span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">CWebSocketConn</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">OnRead</span><span class="params">( Buffer* buf)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">disconnect</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">sendCloseFrame</span><span class="params">(<span class="type">uint16_t</span> code, <span class="type">const</span> std::string reason)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">sendPongFrame</span><span class="params">()</span></span>; <span class="comment">// 发送 Pong 帧</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isCloseFrame</span><span class="params">(<span class="type">const</span> std::string&amp; frame)</span></span>; <span class="comment">//是否是关闭帧</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sendHelloMessage</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">handleClientMessages</span><span class="params">(Json::Value &amp;root)</span></span>;</span><br><span class="line">     <span class="function"><span class="type">int</span> <span class="title">handleRequestRoomHistory</span><span class="params">(Json::Value &amp;root)</span></span>;</span><br><span class="line">    <span class="type">bool</span>  handshake_completed_ = <span class="literal">false</span>; <span class="comment">//握手是否完成</span></span><br><span class="line">    <span class="type">int32_t</span> userid_ = <span class="number">-1</span>;   <span class="comment">//</span></span><br><span class="line">    string username_;           <span class="comment">//用户名</span></span><br><span class="line"></span><br><span class="line">     std::unordered_map&lt;string, Room&gt; rooms_map_;    <span class="comment">//加入的房间</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">using</span> CWebSocketConnPtr = std::shared_ptr&lt;CWebSocketConn&gt;;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/09/12/redis/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-高性能组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-高性能组件" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/08/19/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BB%84%E4%BB%B6/">高性能组件</a>
+    <h1 class="article-title" itemprop="name">
+      高性能组件
     </h1>
   
 
@@ -369,11 +164,32 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>自旋锁是计算机多线程同步中的一种基础锁机制，核心特点是当线程尝试获取锁但未成功时，不会进入阻塞状态，而是通过循环不断尝试获取锁，直到成功获取为止。</p>
-        
-          <a class="article-more-a" href="/2025/08/19/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BB%84%E4%BB%B6/#more">more >></a>
-        
+<span id="more"></span>
+
+<h2 id="存储体系结构"><a href="#存储体系结构" class="headerlink" title="存储体系结构"></a>存储体系结构</h2>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -382,16 +198,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/08/19/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BB%84%E4%BB%B6/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/08/19/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BB%84%E4%BB%B6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2025/09/12/redis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/07/30/mysql/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -411,314 +295,14 @@
 
 
 
-
-  
-    <article id="post-mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>mysql</p>
-<hr>
-        
-          <a class="article-more-a" href="/2025/07/30/mysql/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/07/30/mysql/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-一种求解股票买卖问题的通用解法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/07/26/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/">一种求解股票买卖问题的通用解法</a>
-    </h1>
-  
-
-        
-        <a href="/2025/07/26/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2025-07-26T14:33:11.932Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前置：</p>
-<p>数组prices，prices[i]表示第i天的股票价格</p>
-        
-          <a class="article-more-a" href="/2025/07/26/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/07/26/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-opengl" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>opengl</p>
-<hr>
-        
-          <a class="article-more-a" href="/2025/07/26/opengl/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/07/26/opengl/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-线程池" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/07/20/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">线程池</a>
-    </h1>
-  
-
-        
-        <a href="/2025/07/20/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" class="archive-article-date">
-  	<time datetime="2025-07-20T14:31:12.708Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>池式结构都有一个统一的作用就是复用资源</p>
-        
-          <a class="article-more-a" href="/2025/07/20/%E7%BA%BF%E7%A8%8B%E6%B1%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/07/20/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-百万并发服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/07/20/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">实现服务器的百万并发</a>
-    </h1>
-  
-
-        
-        <a href="/2025/07/20/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2025-07-20T09:38:21.183Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>The reactor design pattern is an event handling pattern for handling service requests delivered concurrently to a service handler by one or more inputs.The service handler then demultiplexes the incoming requests and dispatches them synchronously to the associated request handlers.</p>
-<p>Reactor模型是一种事件驱动的设计模式，它的核心思想是通过一个事件循环来监听和分发各种io事件，当事件发生时调用对应的处理逻辑。</p>
-<p>Reactor模型是一种设计思想，epoll是这种思想在Linux平台上的一种具体实现手段。</p>
-        
-          <a class="article-more-a" href="/2025/07/20/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/07/20/%E7%99%BE%E4%B8%87%E5%B9%B6%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -741,8 +325,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

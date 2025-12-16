@@ -20,8 +20,17 @@
 <meta property="og:image" content="http://example.com/images/mysql/image-20250803214248140.png">
 <meta property="og:image" content="http://example.com/images/mysql/image-20250803215533812.png">
 <meta property="og:image" content="http://example.com/images/mysql/image-20250803221534684.png">
+<meta property="og:image" content="http://example.com/images/mysql/image-20250803230415388.png">
+<meta property="og:image" content="http://example.com/images/mysql/image-20250816174730089.png">
+<meta property="og:image" content="http://example.com/images/mysql/image-20250816174435854.png">
+<meta property="og:image" content="http://example.com/images/mysql/image-20250816175417701.png">
+<meta property="og:image" content="http://example.com/images/mysql/image-20250816180609387.png">
+<meta property="og:image" content="http://example.com/images/mysql/image-20250816180828653.png">
+<meta property="og:image" content="http://example.com/images/mysql/image-20250816185716609.png">
+<meta property="og:image" content="http://example.com/images/mysql/image-20250816232812859.png">
+<meta property="og:image" content="http://example.com/images/mysql/image-20250817010810385.png">
 <meta property="article:published_time" content="2025-07-30T14:08:23.582Z">
-<meta property="article:modified_time" content="2025-08-03T14:26:30.365Z">
+<meta property="article:modified_time" content="2025-08-16T17:09:47.685Z">
 <meta property="article:author" content="CodeFrog">
 <meta property="article:tag" content="加载中">
 <meta name="twitter:card" content="summary">
@@ -60,7 +69,7 @@
 		  <h1 class="header-author"><a href="/">CodeFrog</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">慌不择路，落荒而逃</p>
+		<p class="header-subtitle">我会见到你</p>
 		
 
 		<nav class="header-menu">
@@ -112,7 +121,7 @@
 			  <h1 class="header-author js-header-author">CodeFrog</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>慌不择路，落荒而逃<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>我会见到你<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -194,7 +203,34 @@
 <p>一条undo log日志，分别是记录了Undo类型，表id，头尾信息等在内的基本信息，以及记录了不同操作和数据的操作信息。undo有多种类型，最常见的就是代表增删改的trx_undo_insert_rec、trx_undo_del_mark_rec、trx_undo_upd_exist_rec新增时的undolog操作信息相对简单，</p>
 <p>隔离性的实现原理：锁机制：锁就是我为了我体内的事务和事务之间相互不影响而进化出来的功能，在某个事务操作数据之前，就会为这些数据加上一把锁，防止其他事务同时操作，在操作完成之后会将锁释放，以便其他事务再次进行上锁执行。innodb中的锁： LOCK_S共享锁(读锁) LOCK_X独占锁(写锁)</p>
 <p><img src="/../images/mysql/image-20250803221534684.png" alt="image-20250803221534684"></p>
-<p>数据加了共享锁之后，其他事务仍然可以加新的共享锁，但无法添加排它锁，这样就可以在读取数据的时候，阻止数据被其他事务修改。独占锁，也就是排它锁或写锁。数据加了独占锁之后，直到被释放前，其他事务将不能在为数据加任何锁。合理使用共享锁、独占锁就可以解决事务间写入 隔离的问题，以及脏读、重复读，不过有关读的问题可以使用效率更高的MVCC解决。</p>
+<p>数据加了共享锁之后，其他事务仍然可以加新的共享锁，但无法添加排它锁，这样就可以在读取数据的时候，阻止数据被其他事务修改。独占锁，也就是排它锁或写锁。数据加了独占锁之后，直到被释放前，其他事务将不能在为数据加任何锁。合理使用共享锁、独占锁就可以解决事务间写入 隔离的问题，以及脏读、重复读，不过有关读的问题可以使用效率更高的MVCC(multi-version concurrency control 多版本并发控制机制)解决。</p>
+<p>事务中锁的原理：</p>
+<p><img src="/../images/mysql/image-20250803230415388.png" alt="image-20250803230415388"></p>
+<p>MVCC机制：</p>
+<p>multi-version concurrency control多版本并发控制机制，是为解决[脏读]  [不可重复读]等事务之间读写问题而诞生的，MVCC在某些场景中替代了相对低效的[锁]，在保证了[隔离性]的基础上，提升了读取效率和并发性。</p>
+<p>MVCC是什么，用来解决什么问题、MVCC怎么实现的、undo log版本链 read view怎么回事、四种隔离级别怎么实现的、什么是当前读、什么是快照读、可重复读的隔离级别怎么避免幻读问题、</p>
+<p>InnoDb的页：</p>
+<p>页是InnoDB用于管理存储空间(磁盘和内存)的基本单位，是磁盘与内存的桥梁，数据在磁盘上以页为单位存储，当需要操作数据时，InnoDb会将整个页从磁盘读取到内存的缓冲池中，修改操作也在内存中的页上进行，之后由后台线程刷回磁盘</p>
+<p>索引是什么？</p>
+<p>索引是一种有序的数据结构。按照单个或多个列的值进行排序。索引的目的是提高搜索的效率。 约束是逻辑上的概念，索引是一个数据结构包括逻辑概念也包括物理的存储方式。</p>
+<p>主键索引：非空唯一索引，一个表只有一个主键索引。</p>
+<p><img src="/../images/mysql/image-20250816174730089.png" alt="image-20250816174730089"></p>
+<p><img src="/../images/mysql/image-20250816174435854.png" alt="image-20250816174435854"></p>
+<p><img src="/../images/mysql/image-20250816175417701.png" alt="image-20250816175417701"></p>
+<p>B+树：多路平衡搜索树。平衡：平衡树的高度。  多路：多叉树。搜索树：中序遍历是有序的结构。</p>
+<p><img src="/../images/mysql/image-20250816180609387.png" alt="image-20250816180609387"></p>
+<p><img src="/../images/mysql/image-20250816180828653.png" alt="image-20250816180828653"></p>
+<p><img src="/../images/mysql/image-20250816185716609.png" alt="image-20250816185716609"></p>
+<p><img src="/../images/mysql/image-20250816232812859.png" alt="image-20250816232812859"></p>
+<p>mysql为什么需要主从同步：读写分离</p>
+<p>在业务复杂的系统中，有这么一个场景，有一句sql语句需要锁表，导致暂时不能使用读的服务，那么就很影响运行中的业务，使用主从复制，让主库负责写，从库负责读，这样，即使主库出现了锁表的情形，通过读从库也可以保证业务正常运行。</p>
+<p>数据热备：数据备份，防止主机宕机</p>
+<p>架构的扩展。业务量越来越大，I&#x2F;O访问频率过高，单机无法满足，此时做多库存储，降低磁盘I&#x2F;O访问的频率，提高单个机器的I&#x2F;O性能。</p>
+<p>如何处理mysql的慢查询：1.开启慢查询日志，准确定位到哪个sql语句出现了问题。2.分析sql语句，看看是否load了额外的数据，可能是查询了多余的行并且抛弃掉了，可能是加载了许多结果中并不需要的列，对语句进行分析以及重写。3.分析语句的执行计划，然后获得其使用索引的情况，之后修改语句或者修改索引，使得语句尽可能命中索引。4.如果对语句的优化已经无法进行，可以考虑表中的数据量是否太大，如果是的话，可以进行横向或纵向的分表。</p>
+<p>Mysql事务的四个特性及含义：原子性、一致性、隔离性、持久性(acid)</p>
+<p>原子性:事务是一个不可分割的最小操作单元。一致性：数据需满足所有预设的约束条件。隔离性：当多个事务同时并发执行时，每个事务的执行过程不受其他并发事务的干扰。持久性：一旦事务成功提交，他对数据库的修改将永久保存。</p>
+<p>什么是mysql的主从复制：mysql主从复制是指数据可以从一个mysql数据库服务器主节点复制到一个或多个从节点。mysql默认采用异步复制方式，这样从节点不用一直访问主服务器来更细你自己的数据，数据的更新可以在远程连接上进行，从节点可以复制主数据库中的所有数据库或特定的数据库，或者特定的表。</p>
+<p><img src="/../images/mysql/image-20250817010810385.png" alt="image-20250817010810385"></p>
 
       
 
@@ -287,6 +323,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2025/08/19/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BB%84%E4%BB%B6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          高性能组件
+        
+      </div>
+    </a>
   
   
     <a href="/2025/07/26/%E4%B8%80%E7%A7%8D%E6%B1%82%E8%A7%A3%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
@@ -459,7 +504,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">大连海事18级硕士&lt;br&gt; 四处奔波不见前路&lt;br&gt;&lt;br&gt; 总有一天我会回到你身边</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">大连海事18级硕士</div>
   	  	
     	</section>
     
