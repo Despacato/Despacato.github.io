@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>实例、指针、引用的使用原则 | Frog的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="​	实例、指针、引用的使用原则 ​	 # 什么时候传递实例  声明周期短且明确，需要确定性析构，需要值语义，小型对象，多态性不重要 什么时候使用指针需要多态性&#x2F;继承，有明确的依赖关系，对象很大，共享所有权，可选参数，空值可能，延迟初始化。 指针和引用的区别，什么时候使用指针，什么时候使用引用函数的参数传递，首选引用。返回值优化。构造函数的成员初始化。 指针：可选参数，可能不存在。需要重新">
+  <meta name="description" content="​	实例、指针、引用的使用原则">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实例、指针、引用的使用原则">
 <meta property="og:url" content="http://example.com/2025/12/22/%E5%AE%9E%E4%BE%8B%E3%80%81%E6%8C%87%E9%92%88%E3%80%81%E5%BC%95%E7%94%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%88%99/index.html">
 <meta property="og:site_name" content="Frog的博客">
-<meta property="og:description" content="​	实例、指针、引用的使用原则 ​	 # 什么时候传递实例  声明周期短且明确，需要确定性析构，需要值语义，小型对象，多态性不重要 什么时候使用指针需要多态性&#x2F;继承，有明确的依赖关系，对象很大，共享所有权，可选参数，空值可能，延迟初始化。 指针和引用的区别，什么时候使用指针，什么时候使用引用函数的参数传递，首选引用。返回值优化。构造函数的成员初始化。 指针：可选参数，可能不存在。需要重新">
+<meta property="og:description" content="​	实例、指针、引用的使用原则">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-12-22T12:43:33.231Z">
-<meta property="article:modified_time" content="2025-12-22T12:52:29.023Z">
+<meta property="article:modified_time" content="2025-12-26T04:03:51.509Z">
 <meta property="article:author" content="CodeFrog">
 <meta property="article:tag" content="加载中">
 <meta name="twitter:card" content="summary">
@@ -164,10 +164,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>​	实例、指针、引用的使用原则</p>
-<p>​	<!---more---></p>
-<pre><code># 什么时候传递实例
-</code></pre>
-<p>声明周期短且明确，需要确定性析构，需要值语义，小型对象，多态性不重要</p>
+<span id="more"></span>
+
+<h1 id="什么时候传递实例"><a href="#什么时候传递实例" class="headerlink" title="什么时候传递实例"></a>什么时候传递实例</h1><p>声明周期短且明确，需要确定性析构，需要值语义，小型对象，多态性不重要</p>
 <h1 id="什么时候使用指针"><a href="#什么时候使用指针" class="headerlink" title="什么时候使用指针"></a>什么时候使用指针</h1><p>需要多态性&#x2F;继承，有明确的依赖关系，对象很大，共享所有权，可选参数，空值可能，延迟初始化。</p>
 <h1 id="指针和引用的区别，什么时候使用指针，什么时候使用引用"><a href="#指针和引用的区别，什么时候使用指针，什么时候使用引用" class="headerlink" title="指针和引用的区别，什么时候使用指针，什么时候使用引用"></a>指针和引用的区别，什么时候使用指针，什么时候使用引用</h1><p>函数的参数传递，首选引用。返回值优化。构造函数的成员初始化。</p>
 <p>指针：可选参数，可能不存在。需要重新绑定。动态内存管理。与c库交互</p>

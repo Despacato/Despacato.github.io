@@ -164,14 +164,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>​	实例、指针、引用的使用原则</p>
-<p>​	<!---more---></p>
-<pre><code># 什么时候传递实例
-</code></pre>
-<p>声明周期短且明确，需要确定性析构，需要值语义，小型对象，多态性不重要</p>
-<h1 id="什么时候使用指针"><a href="#什么时候使用指针" class="headerlink" title="什么时候使用指针"></a>什么时候使用指针</h1><p>需要多态性&#x2F;继承，有明确的依赖关系，对象很大，共享所有权，可选参数，空值可能，延迟初始化。</p>
-<h1 id="指针和引用的区别，什么时候使用指针，什么时候使用引用"><a href="#指针和引用的区别，什么时候使用指针，什么时候使用引用" class="headerlink" title="指针和引用的区别，什么时候使用指针，什么时候使用引用"></a>指针和引用的区别，什么时候使用指针，什么时候使用引用</h1><p>函数的参数传递，首选引用。返回值优化。构造函数的成员初始化。</p>
-<p>指针：可选参数，可能不存在。需要重新绑定。动态内存管理。与c库交互</p>
-
+        
+          <a class="article-more-a" href="/2025/12/22/%E5%AE%9E%E4%BE%8B%E3%80%81%E6%8C%87%E9%92%88%E3%80%81%E5%BC%95%E7%94%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%88%99/#more">more >></a>
+        
       
 
       
@@ -234,29 +229,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>​	muduo网络库</p>
-<!---more--->
-
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><ol>
-<li><p>理解阻塞、非阻塞、同步、异步</p>
-</li>
-<li><p>理解Unix&#x2F;Linux上的五种IO模型</p>
-</li>
-<li><p>epoll的原理与优势</p>
-</li>
-<li><p>深刻理解Reactor模型</p>
-</li>
-<li><p>从开源C++网络库学习优秀的代码设计</p>
-</li>
-<li><p>掌握基于事件驱动和事件回调的epoll+线程池面向对象编程</p>
-</li>
-<li><p>通过深入理解muduo源码，加深对于相关项目的深刻理解。</p>
-</li>
-</ol>
-<p>虚基类的静态方法(Poller)需要在Default文件中实现(DefaultPoller)</p>
-<p>一些方法在private权限中实现是因为这些方法不能暴漏给外部对象只能在内部调用。</p>
-<p> <img src="/../images/muduo%E7%BD%91%E7%BB%9C%E5%BA%93/image-20251223164959000.png" alt="image-20251223164959000"></p>
-<p>top -Hp 961 961进程下的线程pid</p>
-
+        
+          <a class="article-more-a" href="/2025/12/17/muduo%E7%BD%91%E7%BB%9C%E5%BA%93/#more">more >></a>
+        
       
 
       
